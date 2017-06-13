@@ -1,0 +1,47 @@
+
+body {
+	font-family: sans-serif;
+}
+h1{
+	font-size: 2em;
+}
+img {
+	width: 100%;
+}
+
+
+ul {
+	padding-left: 0;
+}
+
+.nav-links{
+	list-style-type: none;
+}
+@media screen and (min-width: 450px) {
+	ul li {
+		display: inline;
+	}
+
+}
+
+@media screen and (min-width: 460px){
+	.alert-info {
+		display: none;
+	}
+}
+@media screen and (max-width: 460px) {
+	.nav {
+		text-align: center;
+		height: 50px;
+		padding-top: 15px;
+		background-color: lightgray;
+		margin-top: 5px;
+	}
+	#skip {
+		padding-top: 20px;
+		text-align: center;
+		height: 50px;
+		background-color: lightblue;
+		border: 1px solid lightgray;
+	}
+}

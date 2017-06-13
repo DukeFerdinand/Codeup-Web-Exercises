@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap-slate.css">
+	<link rel="stylesheet" type="text/css" href="css/adventure.css">
+	<meta name="viewport" content="width=device-width, initial-display=1">
+
+	<meta charset="utf-8">
+	<title>Adventure Testing</title>
+
+	
+</head>
+<body >
+<header>
+		<!-- https://bootstrapbay.com/blog/bootstrap-tutorial-navbar/ -->
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle naviation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand navbar-right" href="#">Douglass Hooker</a>
+				</div>
+				<div class="navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="/welcome.html">Home</a></li>
+						<li><a href="/resume.html">Resume</a></li>
+							<li><a href="/contact.html">Contact</a></li>
+						<li class="dropdown">
+							<a class="droppdown-toggle" data-toggle="dropdown" href="#">Projects <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li class="dropdown-header">Fun</li>
+								<li class="active"><a href="#">Adventure Game</a></li>
+								<li><a href="/projects.html">All</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+
+<div>
+	<h1 class="ravenna-white">Adventure Testing Site</h1>
+</div>
+<div>
+		
+
+	
+	<div id="test">
+	<!-- This is the main "display" -->
+		<span id="display1" class="display1">Press Start to Begin!</span>
+		<span>
+	<!-- This is the secondary "display" -->
+		<span id=display2 id="display2" class="test2 display2"><img id="face1" src="/img/pixel/face.png"></span>
+
+
+	<!-- STATS DISPLAY -->
+		<div id="stats">
+			<p id="stat-label">Stats</p>
+			<p>HP</p>
+			<p id="hp" class="clear"> </p>
+			<p>MANA</p>
+			<p id="mana" class="clear"> </p>
+			<p>GOLD</p>
+			<p id="gold" class="clear"> </p>
+		</div>
+		</span>
+	</div>
+	
+	<span class="ravenna" id="test3">
+		<input id="response" type="text" name="user_response">
+		<button id="enter">ENTER</button>
+		
+		<!-- START? -->
+		<button id="intro">START</button>
+		<button id="clear">CLEAR</button>
+
+	</span>
+
+	<!-- CLEAR? -->
+
+
+</div>
+<div>
+	<p class="ravenna-white">Made by Douglass Hooker</p>
+</div>
+	<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="/js/adventure.js"></script>
+</body>
+</html>

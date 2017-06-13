@@ -1,0 +1,110 @@
+
+@font-face {
+	font-family: "Ravenna";
+	src: url(fonts/Ravenna.ttf);
+}
+
+#display1 {
+/* The Big Textbox Display in the center */
+	text-align: center;
+	margin-top: 50px;
+	font-size: 20px;
+	font-family: monospace;
+	border-style: solid;
+	border-color: white;
+	border-width: 5px;
+	color: white;
+	background-color: black;
+	width: 650px;
+	height: 402px;
+}
+
+#display2 {
+	display: block;
+	float: right;
+	border-style: solid;
+	border-color: white;
+	border-width: 5px;
+	color: white;
+	background-image: url('');
+	width: 120px;
+	height: 120px;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+#stats-boss {
+	height: 402px;
+	width: 200px;
+}
+
+#stats {
+	width: 160px;
+	height: 260px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: white;
+	background-color: black;
+	color: white;
+	font-family: monospace;
+	font-size: 20px;
+	float: right;
+	clear: both;
+	margin-top: 10px;
+}
+
+#stat-label {
+	border-bottom: 4px solid white;
+}
+
+#stats>p {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+#test {
+/*Makes the Display move with the scrolling/browser resizing */
+	display: flex;
+	justify-content: center;
+	margin-top: 50px;
+	margin-right: 0px;
+}
+
+
+.test2 {
+	display: flex;
+	justify-content: right;
+	color: white;
+	font-size: 20px
+}
+
+#test3 {
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
+.ravenna {
+	font-family: "Ravenna";
+}
+
+.ravenna-white {
+	font-family: "Ravenna";
+	color: white;
+}
+
+a {
+	color: white;
+	font-family: "Ravenna";
+}
+
+a:hover {
+	color: #F0F0F0;
+}
+
+img {
+	width: 100%;
+}
+#face1 {
+	display: none;
+}

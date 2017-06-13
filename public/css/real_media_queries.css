@@ -1,0 +1,42 @@
+body {
+	background-color: #FFFFCC;
+}
+
+h1, h2, h3, p {
+	font-family: 'Bitter' , serif;
+}
+
+img {
+	width: 100%;
+}
+
+a:hover, a:visited a:active{
+	color: black;
+}
+
+.regular-links {
+	text-decoration: none;
+	color: #E08B3E;
+	display: block;
+}
+
+.round-corners {
+	height: 15px;
+	border-radius: 5px;
+	margin: 5px;
+}
+#home{
+	background-color: #CCCCFF;
+}
+
+#about {
+	background-color: #FFCCCC;
+}
+
+#work {
+	background-color: #CCFFCC;
+}
+
+#contact {
+	background-color: #CCFFFF;
+}

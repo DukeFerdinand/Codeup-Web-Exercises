@@ -1,0 +1,44 @@
+
+
+.container {
+	margin: 0 auto;
+	width: 80%;
+	max-width: 1200px;
+	height: 1200px;
+}
+
+.row {
+	width: 100%;
+}
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column {
+	float: left;
+}
+
+.column.one-whole {
+	width: 100%;
+}
+
+.column.one-half {
+	width: 50%;
+}
+
+.column.one-fourth {
+	width: 25%;
+}
+.column.one-eigth {
+	width: 12.5%;
+	padding: 10px;
+}
+
+.column.one-third {
+	width: 33.33%;
+}
+.column.two-thirds {
+	width: 66.66%
+}

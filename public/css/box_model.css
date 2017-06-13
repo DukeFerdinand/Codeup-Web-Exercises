@@ -1,0 +1,40 @@
+.box {
+	border: 1px solid black;
+	width: 50px;
+	height: 50px;
+	margin: 25px;
+	color: white;
+	padding: 10px;
+	margin-bottom: 25px;
+	float: left;
+}
+#red {
+	background-color: red;
+}
+#orange {
+	background-color: orange;
+}
+#yellow {
+	background-color: yellow;
+}
+#green {
+	background-color: green;
+	clear: left;
+}
+#blue {
+	background-color: blue;
+}
+#violet {
+	background-color: violet;
+}
+img {
+	float: right;
+	position: relative;
+	top: -85px;
+	right: -50px;
+}
+#banner {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+}

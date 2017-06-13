@@ -1,0 +1,61 @@
+.scale {
+	height: 49%; 
+	width: 49%;
+
+}
+h1 {
+	font-size: 2em;
+}
+.margin {
+	margin-top: 5px;
+}
+button#home {
+	background-color: blue;
+}
+button#profile{
+	background-color: green;
+}
+button#share {
+	background-color: orange;
+}
+button#settings {
+	background-color: red;
+}
+div.right {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+.fixed {
+	position: fixed;
+}
+.nav {
+	color: white;
+	border: 0px;
+	width: 60px;
+	height: 30px;
+	float: right;
+}
+div.float {
+	top: 1%;
+	right: 1%;
+	width: 250px;
+}
+
+.head {
+	text-align: right;
+	position: fixed;
+	border-bottom: solid black;
+	background-color: white;
+	width: 100%;
+	background-color: rgba(256, 256, 256, 0);
+}
+.white {
+	background-color: white;
+}
+.clear {
+	clear: both;
+}
+.margin {
+	padding-top: 100px;
+}

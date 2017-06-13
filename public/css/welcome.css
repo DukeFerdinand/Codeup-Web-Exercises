@@ -1,0 +1,30 @@
+h1 {
+	color: purple;
+	text-align: center;
+}
+@font-face {
+	font-family: "Ravenna";
+	src: url(/fonts/Ravenna.ttf);
+}
+
+body {
+	background-image: url("/img/coffee.jpeg");
+	background-size: cover;
+}
+
+.fancy-header {
+	color: blue;
+	text-decoration: underline;
+}
+
+.ravenna {
+	font-family: "Ravenna";
+}
+p {
+	color: white;
+}
+
+ul>li {
+	list-style: disc;
+	color: white;
+}

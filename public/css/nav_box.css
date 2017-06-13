@@ -1,0 +1,30 @@
+/*Nav Box CSS*/
+
+button#home {
+	background-color: blue;
+}
+button#profile{
+	background-color: green;
+}
+button#share {
+	background-color: orange;
+}
+button#settings {
+	background-color: red;
+
+
+}
+.nav {
+	color: white;
+	border: 0px;
+	width: 60px;
+	height: 30px;
+	float: right;
+}
+/*div.float {
+	position: fixed;
+	top: 2%;
+	right: 2%;
+	width: 249px;
+	box-shadow: 10px 10px 5px;
+}*/

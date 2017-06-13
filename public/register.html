@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/dynamics.css">
+	<meta charset="utf-8">
+	<title>Registration for New Users</title>
+	<style type="text/css">
+		h1 {
+			clear: left;
+		}
+		.margin {
+			margin-top: 5px;
+		}
+		button#home {
+			background-color: blue;
+			
+		}
+		button#profile{
+			background-color: green;
+		}
+		button#share {
+			background-color: orange;
+
+		}
+		button#settings {
+			background-color: red;
+			
+			
+		}
+		.nav {
+			color: white;
+			border: 0px;
+			width: 60px;
+			height: 30px;
+			float: right;			
+		}
+
+	</style>
+</head>
+<body>
+	<nav>
+		<div>
+		<form action="/technology.html">
+			<button class="nav" id="home">Home</button>
+		</form>
+			<button class="nav" id="profile">Profile</button>
+			<button class="nav" id="share">Share</button>
+			<button class="nav" id="settings">Settings</button>
+		</div>
+	</nav>
+	<header>
+		<h1>Welcome to Veridian Dynamics!</h1>
+		<hr>
+		<h2>Please register for a free account</h2>
+	</header>
+	<main>
+			<form method="POST" action="https://requestb.in/1j90iy81">
+				<input type="type" name="name" placeholder="name" required autofocus="">
+				<br>
+				<input type="email" name="email" required="" placeholder="email" class="margin">
+				<br>
+				<input type="password" name="password" placeholder="Password" class="margin">
+				<br>
+				<input type="password" name="passwordConfirm" placeholder="Confirm your Password" class="margin">
+				<br>
+				<label for="register">
+				<input type="checkbox" name="register" checked="">Please sign me up for the weekly newsletter!
+				</label>
+				<br>
+				<button>Register</button>
+
+			</form>
+	</main>
+	<footer>
+		<h3>Already a member? Click <a href="/login.html">HERE</a> to login!</h3>
+		<br>
+		<h3>Or try our new <a href="/adventure.html">game</a>!</h3>
+	</footer>
+</body>
+</html>
