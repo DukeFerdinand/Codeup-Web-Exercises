@@ -1,3 +1,5 @@
+"use strict;"
+
 var userStats = {
 	hp: 250,
 	mana: 50,
@@ -6,17 +8,21 @@ var userStats = {
 };
 
 
-// BEGIN THE GAME -----------------------------------
+// BEGIN NEW GAME =============================================
+
+
 $("#intro").click(function(){
-	$("#display1").text("You win the game!");
+	$("#display1").text("");
+	$("#display1").coolType("Welcome, Traveller, to the Kingdom of Altaria!\
+		\
+		What is your name?");
+	console.log("Success! Intro initiated!");
 	$("#hp").text(userStats.hp);
 	$("#mana").text(userStats.gold);
 	$("#face1").show();
 
-});;
-
-// USER PROMPT --------------------------------------
-
+});
+// USER PROMPTS ================================================
 
 
 
