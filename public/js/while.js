@@ -86,7 +86,7 @@
 
 
 // ============================================== For.5
-$("#button").click(function meme() {
+// 
 
 var confirmMaybe = confirm("Will you help us with a FREEEEEEEE survey?")
 
@@ -98,18 +98,18 @@ if (confirmMaybe) {
 			userPrompt = prompt("gimme a real number")
 		}
 		 if (userPrompt == i) {
-			$("#display").coolType("Why is that number here? Skipping " + i);
+			console.log("Why is that number here? Skipping " + i);
 
 		} else if (i % 2 == 0) {
 			continue;
 		} else {
-			$("#display").coolType("Here's a great odd number --> " + i);
+			console.log("Here's a great odd number --> " + i);
 		}
 	}
 } else {
 	alert("YOU WIN");
 }
-});
+
 
 
 
