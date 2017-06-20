@@ -127,10 +127,11 @@ console.log(books);
 // todo:
 // Loop through the array of books using .forEach and print out the specified information about each one.
 for (var i = 0; i< books.length; ++i) {
+	console.log("<--")
     console.log("Book #" + (i + 1));
     console.log("Title: " + books[i].title);
     console.log("Author: " + books[i].firstName + " " + books[i].lastName);
-    console.log("---");
+    console.log("-->");
 
 }
 // end loop here

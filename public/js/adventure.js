@@ -1,4 +1,16 @@
+// (function(){
+
 "use strict;"
+
+
+// OBJECTS =====================================================
+
+
+var newUser = {
+	name: 		"",
+	charRace: ""
+}
+
 
 var userStats = {
 	hp: 250,
@@ -8,14 +20,11 @@ var userStats = {
 };
 
 
+
 // BEGIN NEW GAME =============================================
 
-
 $("#intro").click(function(){
-	$("#display1").text("");
-	$("#display1").coolType("Welcome, Traveller, to the Kingdom of Altaria!\
-		\
-		What is your name?");
+	$("#display1").text("Welcome, Traveller, to the Kingdom of Altaria! \n What is your name?");
 	console.log("Success! Intro initiated!");
 	$("#hp").text(userStats.hp);
 	$("#mana").text(userStats.gold);
@@ -23,16 +32,61 @@ $("#intro").click(function(){
 
 });
 // USER PROMPTS ================================================
+var response;
+
+// $("#response").keyup(function(event){
+//     if(event.keyCode == 13){
+//         $("#enter").click();
+//     }
+// });
+
+document.getElementById("response")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+        document.getElementById("enter").click();
+    }
+});
+
+
+function getResponse(){
+	response = document.getElementById("response");
+	// console.log(response.value);
+	return response = response.value;
+}
+function testResponse(){
+	console.log(response);
+}
+
+
+//THE MAIN GAME=================================================
 
 
 
-
-
-// CLEAR THE GAME !!NO SAVE YET!!--------------------
+// CLEAR THE GAME !!NO SAVE ABILITY YET!!=======================
 $("#clear").click(function(){
 	confirm("Are you sure you want to quit?");
 	$("#display1").text("Press the Start Button!");
 	$("#hp, #mana, #gold").text("");
 	$("#face1").hide();
+	console.log("Cleared the Game!")
 
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// })();
