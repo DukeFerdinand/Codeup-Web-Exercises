@@ -263,66 +263,66 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
 //                  Math 								  //
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
-// var a;
-// var b;
-// var method;
+var a;
+var b;
+var method;
 
 
-// do {
-// 	a = prompt("Please enter whole number 1 of 2");
-// 	if (isNaN(a)){
-// 		alert("Please enter a proper whole number!");
-// 		continue;
-// 	}
-// 	b = prompt("Please enter whole number 2 of 2");
-// 	if (isNaN(b) ){
-// 		alert("Please enter a proper whole number!")
-// 	}
-// } while (isNaN(a) || isNaN(b));
+do {
+	a = prompt("Please enter whole number 1 of 2");
+	if (isNaN(a)){
+		alert("Please enter a proper whole number!");
+		continue;
+	}
+	b = prompt("Please enter whole number 2 of 2");
+	if (isNaN(b) ){
+		alert("Please enter a proper whole number!")
+	}
+} while (isNaN(a) || isNaN(b));
  
-// do {
-// 	method = prompt("Would you like to multiply, divide, add, or subtract?");
-// 	console.log(method);
+do {
+	method = prompt("Would you like to multiply, divide, add, or subtract?");
+	console.log(method);
 
-// function addEmUp(a, b) {
-// 	alert("Your total is " + (parseInt(a) + parseInt(b)));
-// 	return parseInt(a) + parseInt(b);
-// }
+function addEmUp(a, b) {
+	alert("Your total is " + (parseInt(a) + parseInt(b)));
+	return parseInt(a) + parseInt(b);
+}
 
-// function subTriFuge(a, b) {
-// 	alert("Your total is " + (parseInt(a) + parseInt(b)));
-// 	return parseInt(a) - parseInt(b);
-// }
+function subTriFuge(a, b) {
+	alert("Your total is " + (parseInt(a) + parseInt(b)));
+	return parseInt(a) - parseInt(b);
+}
 
-// function divideAndConquer(a, b) {
-// 	alert("Your total is " + (parseInt(a) / parseInt(b)));
-// 	return parseInt(a) / parseInt(b);
-// }
+function divideAndConquer(a, b) {
+	alert("Your total is " + (parseInt(a) / parseInt(b)));
+	return parseInt(a) / parseInt(b);
+}
 
-// function multiplyYourAssets(a, b) {
-// 	alert("Your total is " + (parseInt(a) * parseInt(b)));
-// 	return parseInt(a) * parseInt(b);
-// }
+function multiplyYourAssets(a, b) {
+	alert("Your total is " + (parseInt(a) * parseInt(b)));
+	return parseInt(a) * parseInt(b);
+}
 
 
-// 	switch (method.toLowerCase()) {
-// 		case "multiply":
-// 			console.log(multiplyYourAssets(a,b));
-// 			break;
-// 		case "divide":
-// 			console.log(divideAndConquer(a,b));
-// 			break;
-// 		case "add":
-// 			console.log(addEmUp(a,b));
-// 			break;
-// 		case "subtract":
-// 			console.log(subTriFuge(a,b));
-// 			break;
-// 	}
-// 	if (method == "multiply" || method == "divide" || method == "add" || method == "subtract"){
-// 		break;
-// 	}
-// } while (method != "multiply" || method != "divide" || method != "add" || method != "subtract")
+	switch (method.toLowerCase()) {
+		case "multiply":
+			console.log(multiplyYourAssets(a,b));
+			break;
+		case "divide":
+			console.log(divideAndConquer(a,b));
+			break;
+		case "add":
+			console.log(addEmUp(a,b));
+			break;
+		case "subtract":
+			console.log(subTriFuge(a,b));
+			break;
+	}
+	if (method == "multiply" || method == "divide" || method == "add" || method == "subtract"){
+		break;
+	}
+} while (method != "multiply" || method != "divide" || method != "add" || method != "subtract")
 
 
 
