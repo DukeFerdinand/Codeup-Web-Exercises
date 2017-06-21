@@ -45,6 +45,7 @@ document.getElementById("response")
     event.preventDefault();
     if (event.keyCode == 13) {
         document.getElementById("enter").click();
+        document.getElementById("response").innerText = "";
     }
 });
 
