@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="/css/calculator.css">
 
 
 
@@ -13,10 +14,43 @@
 	</header>
 	<main class="container">
 		<div class="row">
-			<div class="col-md-4 text-center">Hello</div>
-			<div class="col-md-8"><img src="http://s3.freefoto.com/images/04/03/04_03_10_web.jpg"></div>
+			<div class="col-md-offset-3 col-md-6">
+				<div class=" row">
+					<div id="left-operand" class="text-fields col-sm-offset-1 col-xs-3"></div>
+					<div id="operator" class="text-fields col-sm-offset-1 col-xs-2"></div>
+					<div id="right-operand" class="text-fields col-sm-offset-1 col-xs-3"></div>
+				</div>
+				<div class="row">
+					<span id="1" value="1" class="number col-xs-1 button">1</span>
+					<span id="2" class="number col-xs-1 button">2</span>
+					<span id="3" class="number col-xs-1 button">3</span>
+					<span id="plus" class="operators col-xs-1 button">+</span>
+				</div>
+				<div class="row">
+					<span id="4" class="number col-xs-1 button">4</span>
+					<span id="5" class="number col-xs-1 button">5</span>
+					<span id="6" class="number col-xs-1 button">6</span>
+					<span id="minus" class="operators col-xs-1 button">-</span>
+				</div>
+				<div class="row">
+					<span id="7" class="number col-xs-1 button">7</span>
+					<span id="8" class="number col-xs-1 button">8</span>
+					<span id="9" class="number col-xs-1 button">9</span>
+					<span id="multiply" class="operators col-xs-1 button">*</span>
+				</div>
+				<div class="row">
+					<span id="C" class="col-xs-1 button">C</span>
+					<span id="0" class="number col-xs-1 button">0</span>
+					<span id="answer" class="col-xs-1 button">=</span>
+					<span id="divide" class="operators col-xs-1 button">/</span>
+				</div>
+			</div>
 		</div>
 
 	</main>
+<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/calculator.js"></script>
+
 </body>
 </html>

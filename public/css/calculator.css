@@ -1,0 +1,20 @@
+.testing-class {
+	background-color: green;
+}
+
+.text-fields {
+	overflow: scroll;
+	height: 25px;
+	border: 1px solid black;
+
+}
+
+.button {
+
+	background-color: lightgray;
+	border:1px solid black;
+}
+
+.number:hover {
+	background-color: red;
+}
