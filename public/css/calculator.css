@@ -1,3 +1,17 @@
+div{
+	padding: 0;
+}
+
+div.center {
+	width: 50%;
+}
+
+span {
+	display: block;
+	width: 99%;
+	margin: 0;
+}
+
 .testing-class {
 	background-color: green;
 }
@@ -9,12 +23,49 @@
 
 }
 
+#answer {
+	background-color: green;
+	color: white;
+}
+
+#answer:hover {
+	background-color: darkgreen;
+}
+
+#C {
+	color: red;
+
+}
+
+#C:hover {
+	background-color: darkgray;
+}
+
 .button {
 
 	background-color: lightgray;
 	border:1px solid black;
+	height: 40px;
+	font-size: 2em;
+}
+
+.number {
+	color: white;
+	background-color: red;
 }
 
 .number:hover {
-	background-color: red;
+	background-color: darkred;
 }
+
+.operators {
+	background-color: blue;
+	color: white;
+
+}
+
+.operators:hover {
+	background-color: darkblue;
+}
+
+

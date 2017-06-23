@@ -17,6 +17,8 @@
 
 6. Secondary Functionality?
 
+7. Now make it all happen in one text box
+
 ```javascript
 var helpPlease = function getHelp() {
 	document.getElementById("help");
