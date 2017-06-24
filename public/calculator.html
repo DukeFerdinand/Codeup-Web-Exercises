@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="/css/calculator.css">
 
@@ -10,16 +15,32 @@
 </head>
 <body>
 	<header>
-		<h1 class="jumbotron text-center">Calculator<small>Numbers</small></h1>
+		<h1 class="text-center">
+			<pre>
+			<p>
+ _______  _______  _        _______           _        _______ _________ _______   
+(  ____ \(  ___  )( \      (  ____ \|\     /|( \      (  ___  )\__   __/(  ____ \  
+| (    \/| (   ) || (      | (    \/| )   ( || (      | (   ) |   ) (   | (    \/  
+| |      | (___) || |      | |      | |   | || |      | (___) |   | |   | (__      
+| |      |  ___  || |      | |      | |   | || |      |  ___  |   | |   |  __)     
+| |      | (   ) || |      | |      | |   | || |      | (   ) |   | |   | (        
+| (____/\| )   ( || (____/\| (____/\| (___) || (____/\| )   ( |   | |   | (____/\  
+(_______/|/     \|(_______/(_______/(_______)(_______/|/     \|   )_(   (_______/  
+			</p>
+			</pre>
+
+		</h1>
+
 	</header>
 	<main class="container">
-		
+		<div class="calculator">
 				<div class="row">
-					<div id="left-operand" class="text-right text-fields col-md-4 col-xs-3"></div>
+					<span id="C" class="col-xs-offset-2 col-xs-2 col-sm-offset-4 col-sm-1 button push-button">C</span>
+					<div id="left-operand" class="text-right text-fields col-xs-6 col-sm-3 col-md-3 "></div>
 				</div>
 			<div class="row">
 				
-					<span id="1" class="col-xs-2 col-sm-1 number button">1</span>
+					<span id="1" class="col-xs-offset-2 col-xs-2 col-sm-offset-4 col-sm-1 number button">1</span>
 					<span id="2" class="col-xs-2 col-sm-1 number button">2</span>
 					<span id="3" class="col-xs-2 col-sm-1 number  button">3</span>
 					<span id="plus" class="col-xs-2 col-sm-1 operators button">+</span>
@@ -27,7 +48,7 @@
 			</div>
 			<div class="row">
 				
-					<span id="4" class="col-xs-2 col-sm-1 number button">4</span>
+					<span id="4" class=" col-xs-offset-2 col-xs-2 col-sm-offset-4 col-sm-1 number button">4</span>
 					<span id="5" class="col-xs-2 col-sm-1 number button">5</span>
 					<span id="6" class="col-xs-2 col-sm-1 number  button">6</span>
 					<span id="minus" class="col-xs-2 col-sm-1 operators button">-</span>
@@ -35,7 +56,7 @@
 			</div>
 			<div class="row">
 				
-					<span id="7" class="col-xs-2 col-sm-1 number button">7</span>
+					<span id="7" class="col-xs-offset-2 col-xs-2 col-sm-offset-4 col-sm-1 number button">7</span>
 					<span id="8" class="col-xs-2 col-sm-1 number button">8</span>
 					<span id="9" class="col-xs-2 col-sm-1 number button">9</span>
 					<span id="multiply" class="col-xs-2 col-sm-1 operators button">*</span>
@@ -43,13 +64,13 @@
 			</div>
 			<div class="row">
 				
-					<span id="C" class="col-xs-2 col-sm-1 button">C</span>
+					<div id="decimal" class="col-xs-offset-2 col-xs-2 col-sm-offset-4 col-sm-1 button">.</div>
 					<span id="0" class="col-xs-2 col-sm-1 number button">0</span>
 					<span id="answer" class="col-xs-2 col-sm-1 button">=</span>
 					<span id="divide" class="col-xs-2 col-sm-1 operators button">/</span>
 				
 			</div>
-		
+		</div>
 
 	</main>
 <script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>

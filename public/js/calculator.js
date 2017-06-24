@@ -26,19 +26,26 @@
 // 		Some Variables
 //=========================================================================
 
-var equals = document.getElementById("answer");
 var clear = document.getElementById("C");
+var decimal = document.getElementById("decimal");
+var equals = document.getElementById("answer");
 var leftOperand = document.getElementById("left-operand");
-var rightOperand = document.getElementById("right-operand")
 var numbers = document.getElementsByClassName("number");
 var operators = document.getElementsByClassName("operators");
+var rightOperand = document.getElementById("right-operand");
 
-var box1;
-var box2;
-var theOperator;
 
 //=========================================================================
-//	This for loop assigns "clickability" to each NUMBERED button only
+// These take the value of whatever the user types
+//=========================================================================
+
+
+var box1 = '';
+var box2 = '';
+
+
+//=========================================================================
+// 		For loop adds event listener for first number
 //=========================================================================
 
 
@@ -60,13 +67,21 @@ function stageFirstNumber() {
 	box1 = leftOperand.innerText;
 
 //Adds clear funciton after first number is typed
-	clear.addEventListener('click', clearNumbers);
-	// console.log(box1);
+	
+	console.log(box1);
 	
 }
 
+//=========================================================================
+//		This for loop adds event listeners to buttons for the operators
+//=========================================================================
 
 
+for (var k = 0; k < operators.length; ++k) {
+	operators[k].addEventListener('click', stageOperation);
+
+
+}
 
 
 //===========================================================================
@@ -77,27 +92,20 @@ function stageFirstNumber() {
 
 function stageOperation(){
 
+	if (box1 != ''){
 	// console.log(this.innerText);
 	leftOperand.innerText = '';
 	leftOperand.innerText = this.innerText;
-
+	}
 	if (operators !== ''){
 		for (var i = 0; i < numbers.length ; ++i){
 
 		numbers[i].removeEventListener('click', stageFirstNumber);
 		numbers[i].addEventListener('click', stageSecondNumber);	
-	
-
-
+		}
 	}
-
-}
-
-	return operators = this.innerText
-
-	// console.log(operator.innerText);
-
-	
+	console.log(operators.value);
+	return operators = this.innerText;
 
 
 }
@@ -111,24 +119,45 @@ function stageSecondNumber(){
 	if (leftOperand.innerText == '+' || leftOperand.innerText == '-' || leftOperand.innerText == '*' || leftOperand.innerText == '/'){
 	leftOperand.innerText = '';
 	}
+	if (box1 != ''){
 	leftOperand.innerText += this.innerText;
-	return box2 = leftOperand.innerText;
-	// console.log(this.innerText);
-	// console.log(box2);
 
-
+	box2 = leftOperand.innerText;
+	console.log(box2);
+	
+	}
+	
 }
 
 
 //=========================================================================
-//		This for loop adds event listeners to buttons for the operators
+//		Decimal Function
+//=========================================================================
+
+function addDecimal(){
+	if (leftOperand.innerText == '+' || leftOperand.innerText == '-' || leftOperand.innerText == '*' || leftOperand.innerText == '/'){
+	leftOperand.innerText = '';
+	}
+	if (leftOperand.innerText.indexOf('.') == -1) {
+		leftOperand.innerText += '.';
+	}
+	
+}
+
+//=========================================================================
+//		Add Event Listener for Equals and Decimal
 //=========================================================================
 
 
-for (var k = 0; k < operators.length; ++k) {
-	operators[k].addEventListener('click', stageOperation);
+decimal.addEventListener('click', addDecimal);
+equals.addEventListener('click', getAnswer);
 
 
+//=========================================================================
+//		Clears the Operator for continued operations
+//=========================================================================
+function clearOp(){
+	operators = '';
 }
 
 //=========================================================================
@@ -137,50 +166,41 @@ for (var k = 0; k < operators.length; ++k) {
 
 
 function getAnswer() {
-	// console.log("It works!");
+
+	if (box1 != '' && box2 != '' && operators != ''){
+	// console.log("box 1 is " + box1);
+	// console.log("box 2 is " + box2);
+
 	switch (operators){
 		case "+":
-			// console.log(parseInt(box1) + parseInt(box2));
-			leftOperand.innerText = (parseFloat(box1) + parseFloat(box2));
+			
+			box1 = (parseFloat(box1) + parseFloat(box2));
+			
+			leftOperand.innerText = box1.toFixed(2);
+			
+
 			break;
 		case "-":
-			leftOperand.innerText = (parseFloat(box1) - parseFloat(box2));
+			box1 = (parseFloat(box1) - parseFloat(box2));
+			leftOperand.innerText = box1.toFixed(2);
+			
+			
 			break;
 		case "*":
-			leftOperand.innerText = (parseFloat(box1) * parseFloat(box2));
+			box1 = (parseFloat(box1) * parseFloat(box2));
+			leftOperand.innerText = box1.toFixed(2);
+			
+
 			break;
 		case "/":
-			leftOperand.innerText = (parseFloat(box1) / parseFloat(box2)).toFixed(2);
+			box1 = (parseFloat(box1) / parseFloat(box2));
+			leftOperand.innerText = box1.toFixed(2);
+			
+
 			break;
+		}
 	}
-
-
-	// for (i = 0; i < numbers.length ; ++i){
-	// 	//removes the first Event Listener for the First Number
-	// 	numbers[i].removeEventListener('click', stageSecondNumber);
-	// 	//adds new Event Listener for Second Number
-	// 	numbers[i].addEventListener('click', stageFirstNumber);
-
-	// 	}
 }
-
-
-
-//=========================================================================
-//		If answer is infinity
-//=========================================================================
-
-if (leftOperand.innerText == "Infinity") {
-	leftOperand.innerText = "You broke the computer!";
-}
-
-//=========================================================================
-//		This function should get the answer when equals is clicked
-//=========================================================================
-
-
-
-equals.addEventListener('click', getAnswer);
 
 
 
@@ -188,12 +208,10 @@ equals.addEventListener('click', getAnswer);
 //		This Function Clears and returns the buttons to normal
 //=========================================================================
 
-
+clear.addEventListener('click', clearNumbers);
 function clearNumbers(){
 	// console.log("clear!");
 	leftOperand.innerText = '';
-	// theOperator.innerText = '';
-	// rightOperand.innerText = '';
 	box1 = '';
 	box2 = '';
 
@@ -205,6 +223,11 @@ function clearNumbers(){
 
 		}
 }
+
+
+
+
+
 
 
 
