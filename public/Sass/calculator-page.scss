@@ -1,0 +1,107 @@
+html {
+	height: 100%;
+	background: white;
+	background: radial-gradient(circle, #fff 20%, #ccc);
+	background-size: cover;
+}
+body{
+	background-color: rgba(0,0,0,0);
+}
+
+p {
+	font-size: 1vw 1vh;
+	width: 100%;
+}
+
+main {
+	margin: 100px;
+}
+div{
+	padding: 0;
+}
+
+div.center {
+	width: 50%;
+}
+
+span {
+	display: block;
+	width: 99%;
+	margin: 1px;
+}
+
+.testing-class {
+	background-color: green;
+}
+
+.text-fields {
+	overflow: scroll;
+	height: 40px;
+	border: 1px solid black;
+	font-size: 2em;
+	margin-top: 1px;
+	margin-left: 2px;
+
+}
+
+#answer {
+	background-color: green;
+	color: white;
+}
+
+#answer:hover {
+	background-color: darkgreen;
+}
+
+#C {
+	color: red;
+
+}
+
+#C:hover {
+	background-color: darkgray;
+}
+
+#decimal:hover {
+	background-color: darkgray;
+}
+
+#places {
+	font-size: .5em;
+}
+
+.button {
+
+	background-color: lightgray;
+	border:1px solid black;
+	height: 40px;
+	font-size: 2em;
+	user-select: none;
+}
+
+.number {
+	color: white;
+	background-color: red;
+}
+
+.number:hover {
+	background-color: darkred;
+}
+
+.operators {
+	background-color: blue;
+	color: white;
+
+}
+
+.operators:hover {
+	background-color: darkblue;
+}
+
+
+
+@media (min-width: 768px){
+	pre{
+		font-size-adjust: auto;
+	}
+}
