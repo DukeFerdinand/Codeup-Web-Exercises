@@ -1,5 +1,5 @@
-@import "gridvariables.scss";
-@import "gridmixins.scss";
+@import "gridvariables.scss"; // gets variables
+@import "gridmixins.scss";// gets mixins
 
 
 //========================================================================
@@ -80,7 +80,11 @@ img {
 
 
 //========================================================================
+//
 //		Adding formatting to buttons?
+//		IMPORTANT: This section only applies to Calculator
+//		Not the whole grid system
+//
 //========================================================================
 
 //Invidible "columns" to provide space
@@ -116,6 +120,8 @@ img {
 
 //========================================================================
 //		Setting special buttons color and :hover
+//		IMPORTANT: This section only applies to Calculator
+//		Not the whole grid system
 //========================================================================
 
 div {
@@ -213,9 +219,7 @@ div {
 	
 }
 
-//========================================================================
-//		Extra Large changes Maybe
-//========================================================================
+
 
 
 

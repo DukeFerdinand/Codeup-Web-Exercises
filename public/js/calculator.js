@@ -38,7 +38,7 @@ var rightOperand = document.getElementById("right-operand");
 //=========================================================================
 // These take the value of whatever the user types
 //=========================================================================
-
+var answerCount = 0;
 
 var box1 = '';
 var box2 = '';
@@ -62,9 +62,15 @@ for (var i = 0; i < numbers.length ; ++i){
 
 
 function stageFirstNumber() {
-	
-	leftOperand.innerText += this.innerText;
-	box1 = leftOperand.innerText;
+	if (leftOperand.innerText != '' && answerCount != 0){
+		leftOperand.innerText = '';
+		leftOperand.innerText += this.innerText;
+		box2 = '';
+		box1 = leftOperand.innerText;
+	} else {
+		leftOperand.innerText += this.innerText;
+		box1 = leftOperand.innerText;
+	}
 
 //Adds clear funciton after first number is typed
 	
@@ -91,22 +97,27 @@ for (var k = 0; k < operators.length; ++k) {
 
 
 function stageOperation(){
+	if (box1 == Infinity || box1 == -Infinity || box2 == Infinity || box2 == -Infinity){
+		console.log("Error");
+	}else {	
 
-	if (box1 != ''){
+		setupSecondNumber();
+		
 	// console.log(this.innerText);
 	leftOperand.innerText = '';
 	leftOperand.innerText = this.innerText;
-	}
-	if (operators !== ''){
-		for (var i = 0; i < numbers.length ; ++i){
 
-		numbers[i].removeEventListener('click', stageFirstNumber);
-		numbers[i].addEventListener('click', stageSecondNumber);	
+	if (answerCount != 0) {
+		leftOperand.innerText = '';
+		leftOperand.innerText = this.innerText;
+		return operators = this.innerText;
 		}
-	}
-	console.log(operators.value);
+		
+	console.log(operators.innerText);
 	return operators = this.innerText;
 
+	
+	}
 
 }
 
@@ -116,6 +127,10 @@ function stageOperation(){
 //=========================================================================
 
 function stageSecondNumber(){
+	// if (answerCount != 0 && operators != ''){
+	// 	clearNumbers();
+
+	// }
 	if (leftOperand.innerText == '+' || leftOperand.innerText == '-' || leftOperand.innerText == '*' || leftOperand.innerText == '/'){
 	leftOperand.innerText = '';
 	}
@@ -153,11 +168,40 @@ decimal.addEventListener('click', addDecimal);
 equals.addEventListener('click', getAnswer);
 
 
+
+//=========================================================================
+//		Sets up first number when called
+//=========================================================================
+function setupFirstNumber () {
+for (i = 0; i < numbers.length ; ++i){
+		//removes the first Event Listener for the First Number
+		numbers[i].removeEventListener('click', stageSecondNumber);
+		//adds new Event Listener for Second Number
+		numbers[i].addEventListener('click', stageFirstNumber);
+
+	}
+}
+
+//=========================================================================
+//		Sets up for second number when called
+//=========================================================================
+
+function setupSecondNumber() {
+for (var i = 0; i < numbers.length ; ++i){
+
+		numbers[i].removeEventListener('click', stageFirstNumber);
+		numbers[i].addEventListener('click', stageSecondNumber);	
+		}
+}
+
+
 //=========================================================================
 //		Clears the Operator for continued operations
 //=========================================================================
 function clearOp(){
 	operators = '';
+	box1 = '';
+	box2 = '';
 }
 
 //=========================================================================
@@ -168,8 +212,18 @@ function clearOp(){
 function getAnswer() {
 
 	if (box1 != '' && box2 != '' && operators != ''){
-	// console.log("box 1 is " + box1);
-	// console.log("box 2 is " + box2);
+	console.log("box 1 is " + box1);
+	console.log("box 2 is " + box2);
+	for (i = 0; i < numbers.length ; ++i){
+		//removes the first Event Listener for the First Number
+		numbers[i].removeEventListener('click', stageSecondNumber);
+		//adds new Event Listener for Second Number
+		numbers[i].addEventListener('click', stageFirstNumber);
+
+		}
+
+
+	answerCount = answerCount + 1;
 
 	switch (operators){
 		case "+":
@@ -194,8 +248,13 @@ function getAnswer() {
 			break;
 		case "/":
 			box1 = (parseFloat(box1) / parseFloat(box2));
+			if (box1 == Infinity || box1 == -Infinity){
+				alert("Error, divide by 0");
+				clearNumbers();
+				setupFirstNumber();
+			} else {
 			leftOperand.innerText = box1.toFixed(2);
-			
+			}
 
 			break;
 		}
@@ -214,6 +273,8 @@ function clearNumbers(){
 	leftOperand.innerText = '';
 	box1 = '';
 	box2 = '';
+	answerCount = 0;
+
 
 	for (i = 0; i < numbers.length ; ++i){
 		//removes the first Event Listener for the First Number
