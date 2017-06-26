@@ -59,7 +59,7 @@ geocoder.geocode({ "address": query }, function(results, status) {
 		map: map
 });
 		var infowindow = new google.maps.InfoWindow({
-   		content: "<h1 class='red'>Hello<small>world</small></h1><ul><li>Hello</li><li>World</li></ul>"
+   		content: "<div><object type= 'text/html' data = 'http://codeup.dev/calculator.html' width = '400px' height = '400px'></object></div>"
 });
 		infowindow.open(map, marker);
 
