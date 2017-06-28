@@ -1,0 +1,28 @@
+@import "konami-mixins.scss";
+
+//Variables and Placeholders?
+$image-width: 25%;
+
+body {
+	@include best_background
+}
+
+span{
+	display: none;
+}
+
+#sun {
+	float: left;
+	width: $image-width;
+}
+
+#heart {
+	float: left;
+	width: $image-width;
+}
+
+#clear {
+	font-size: 2em;
+	float: left;
+	clear: left;
+}

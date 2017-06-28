@@ -1,0 +1,26 @@
+main {
+	width: 90%;
+}
+
+nav {
+	float: right;
+}
+nav {
+	ul{
+		li {
+			display: inline-block;
+		}
+	}
+}
+
+
+.no-dots {
+	list-style-type: none;
+	display: inline-block;
+}
+
+
+// ONLY ACTIVATE THIS ON SMALL SCREENS
+.hidden-default {
+
+}

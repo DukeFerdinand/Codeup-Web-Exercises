@@ -17,11 +17,6 @@
   -moz-box-sixing: border-box;
   box-sizing: border-box; }
 
-html {
-  background: -webkit-radial-gradient(white, lightgray);
-  background: -o-radial-gradient(white, lightgray);
-  background: radial-gradient(white, lightgray); }
-
 img {
   width: auto;
   max-width: 100%;
