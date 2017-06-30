@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <meta charset="utf-8">
     <title>Animate</title>
     <style>
         html, body {
             margin: 0px;
             padding: 0;
+            width: 1200px;
             height: 900px;
+            overflow: none;
         }
 
         #btn-animate {
@@ -21,21 +25,28 @@
             width: 250px;
             height: 250px;
         }
+        .gone{
+            opacity: 0;
+            width: 230px;
+            height: 230px;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
     <p>
+
         <button id="btn-move">Move It</button>
+        <button id="btn-move-right">Move Right</button>
         <button id="btn-scale">Scale It</button>
         <button id="scale-up">Scale Height</button>
         <button id="circle">Circle-ify</button>
       <!--   <button id="rotate">Rotate</button> -->
-        <button id="btn-hide">Hide It</button>
         <button id="btn-show">Show It</button>
         <button id="btn-all">Animate All</button>
     </p>
 
-    <div id="animate-box"></div>
+    <div id="animate-box"><img class="gone" src="/img/profile.png"></div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
@@ -45,6 +56,12 @@
         $('#btn-move').click(function(){
             $('#animate-box').animate({
                 left: '-=100px'
+            })
+        })
+        //Right
+        $('#btn-move-right').click(function(){
+            $('#animate-box').animate({
+                left: '+=100px'
             })
         })
         // TODO: "Scale It" should expand the box width by 50%
@@ -92,14 +109,19 @@
                     height: '+=50%',
                     'border-radius': '+=1000px'
                 }, 1000).animate({
-                    opacity: 0
-                }, 1000).animate({
                     left: 0,
                     width: '250px',
                     height: '250px',
                     'border-radius': 0,
                     opacity: '1'
-                }, 1000)
+                }, { duration: 1000,
+                    complete: function(){
+                        $('.gone').animate({
+                            opacity: 1
+                        }, 600)
+                    }
+                });
+            
             });
 
         //      1) Move and scale the box simultaneously
