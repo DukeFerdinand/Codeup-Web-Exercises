@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animate</title>
+    <style>
+        html, body {
+            margin: 0px;
+            padding: 0;
+            height: 900px;
+        }
+
+        #btn-animate {
+            margin: 15px;
+        }
+
+        #animate-box {
+            background-color: #000033;
+            height: 250px;
+            margin: auto;
+            position: relative;
+            width: 250px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button id="btn-move">Move It</button>
+        <button id="btn-scale">Scale It</button>
+        <button id="scale-up">Scale Height</button>
+        <button id="circle">Circle-ify</button>
+      <!--   <button id="rotate">Rotate</button> -->
+        <button id="btn-hide">Hide It</button>
+        <button id="btn-show">Show It</button>
+        <button id="btn-all">Animate All</button>
+    </p>
+
+    <div id="animate-box"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        "use strict";
+        // TODO: "Move It" should move the box 100 pixels to the left
+        $('#btn-move').click(function(){
+            $('#animate-box').animate({
+                left: '-=100px'
+            })
+        })
+        // TODO: "Scale It" should expand the box width by 50%
+        $('#btn-scale').click(function(){
+            $('#animate-box').animate({
+                width: "+=50%"
+            })
+        })
+        // height
+        $('#scale-up').click(function(){
+            $('#animate-box').animate({
+                height: '+=50%'
+            })
+        })
+        // circle
+        $('#circle').click(function(){
+            $('#animate-box').animate({
+                'border-radius': '+=100px'
+            })
+        })
+        // // rotate
+        // $('#rotate').click(function(){
+        //     $('#animate-box').animate({
+        //         rotate: '+=100deg'
+        //     }, 1000)
+        // })
+
+        // TODO: "Hide It" should use opacity to make the box invisible
+        $('#btn-hide').click(function(){
+            $('#animate-box').animate({
+                opacity: 0
+            })
+        })
+        // TODO: "Show It" should make the box appear
+        $('#btn-show').click(function(){
+            $('#animate-box').animate({
+                opacity: '1'
+            }, 1000)
+        })
+        // TODO: "Animate All" should use an animation stack to:
+        $('#btn-all').click(function(){
+            $('#animate-box').animate({
+                    left: '-=100px',
+                    width: '+=50%',
+                    height: '+=50%',
+                    'border-radius': '+=1000px'
+                }, 1000).animate({
+                    opacity: 0
+                }, 1000).animate({
+                    left: 0,
+                    width: '250px',
+                    height: '250px',
+                    'border-radius': 0,
+                    opacity: '1'
+                }, 1000)
+            });
+
+        //      1) Move and scale the box simultaneously
+        //      2) Hide the box
+        //      3) Reset the box back to its original position and opacity
+    });
+    </script>
+</body>
+</html>

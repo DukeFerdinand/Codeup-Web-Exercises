@@ -4,9 +4,21 @@ main {
 nav {
   float: right; }
 
-nav ul li {
-  display: inline-block; }
+ul.outer > li {
+  display: inline-block;
+  width: 100px;
+  background: lightgray; }
+
+.dropdown {
+  display: none;
+  text-align: left; }
 
 .no-dots {
-  list-style-type: none;
-  display: inline-block; }
+  list-style-type: none; }
+
+#profile {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }

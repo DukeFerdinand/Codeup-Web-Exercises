@@ -5,20 +5,26 @@ main {
 nav {
 	float: right;
 }
-nav {
-	ul{
-		li {
-			display: inline-block;
-		}
-	}
+
+ul.outer>li{
+	display: inline-block;
+	width: 100px;
+	background: lightgray;
 }
 
+.dropdown {
+	display: none;
+	text-align: left;
+}
 
 .no-dots {
 	list-style-type: none;
-	display: inline-block;
+	
 }
-
+#profile{
+	cursor: pointer;
+	user-select: none;
+}
 
 // ONLY ACTIVATE THIS ON SMALL SCREENS
 .hidden-default {
