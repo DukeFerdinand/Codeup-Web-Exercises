@@ -1,0 +1,24 @@
+main {
+  width: 90%; }
+
+nav {
+  float: right; }
+
+ul.outer > li {
+  display: inline-block;
+  width: 100px;
+  background: lightgray; }
+
+.dropdown {
+  display: none;
+  text-align: left; }
+
+.no-dots {
+  list-style-type: none; }
+
+#profile {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }

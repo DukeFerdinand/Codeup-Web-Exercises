@@ -1,8 +1,15 @@
+$whitish: #EEEEFF;
+
 @mixin sidebars {
     margin-left: -600px;
     width: 70.8333%;
     height: 377.778%;
     border-radius: 600px;
+    box-shadow: 3px -3px 3px rgba(0,0,0,0.5);
+}
+@mixin cursor-selects{
+    cursor: pointer;
+    user-select: none;
 }
 
 html, body {
@@ -16,20 +23,38 @@ html, body {
 #sidebar1 {
 	@include sidebars;
     clear: left;
-    background: #000080;
+    background: #000088;
+    text-align: right;
 }
 #sidebar2 {
     @include sidebars;
-    background: #008000;
-    z-index: 950;
+    background: #008800;
     float: left;
 }
 #sidebar3{
     @include sidebars;
-    background: #800000;
+    background: #880000;
     float: left;
-    z-index: 900;
     margin-top: 250px;
+}
+#sidebar4{
+    background: #808080;
+    width: 30.8333%;
+    height: 100%;
+    border-radius: 600px;
+    position: fixed;
+    top: -400px;
+    right: -300px;
+}
+
+#profile{
+    @include cursor-selects;
+    position:absolute;
+    top: 200px;
+    right: 5px;
+    z-index: 100;
+    color: $whitish;
+
 }
 
 .hidden-profile {
