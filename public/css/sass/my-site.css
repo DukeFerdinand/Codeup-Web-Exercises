@@ -10,16 +10,20 @@ html, body {
   width: 70.8333%;
   height: 377.778%;
   border-radius: 600px;
+  -webkit-box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
   clear: left;
-  background: #000080; }
+  background: #000088;
+  text-align: right; }
 
 #sidebar2 {
   margin-left: -600px;
   width: 70.8333%;
   height: 377.778%;
   border-radius: 600px;
-  background: #008000;
-  z-index: 950;
+  -webkit-box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
+  background: #008800;
   float: left; }
 
 #sidebar3 {
@@ -27,10 +31,32 @@ html, body {
   width: 70.8333%;
   height: 377.778%;
   border-radius: 600px;
-  background: #800000;
+  -webkit-box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
+  background: #880000;
   float: left;
-  z-index: 900;
   margin-top: 250px; }
+
+#sidebar4 {
+  background: #808080;
+  width: 30.8333%;
+  height: 100%;
+  border-radius: 600px;
+  position: fixed;
+  top: -400px;
+  right: -300px; }
+
+#profile {
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 200px;
+  right: 5px;
+  z-index: 100;
+  color: #EEEEFF; }
 
 .hidden-profile {
   margin: 15px;
