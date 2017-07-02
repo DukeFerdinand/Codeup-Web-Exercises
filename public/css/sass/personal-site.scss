@@ -1,0 +1,99 @@
+// $whitish: 
+$breakpoint-sm: 30em;
+$gradient-start: #777;
+$gradient-mid: #999;
+$gradient-stop: #AAA;
+
+@mixin clickable {
+	cursor: pointer;
+	user-select: none;
+}
+
+@mixin display-off {
+	display: none;
+}
+html, body{
+	padding: 0;
+	margin: 0;
+}
+
+// This is for the mobile default state
+
+
+ul {
+	margin-top: -3px;
+	width: 100%;
+	list-style: none;
+}
+
+#hidden1 {
+	padding-top: 15px;
+	background-color: #4909AF;
+	z-index: 4;
+}
+#hidden2{
+	background-color: #4909AF;
+}
+#hidden3{
+	background-color: #4909AF;
+}
+#title {
+	display: inline-block;
+}
+#mobile-navbar {
+	width: 100%;
+	margin: 0;
+	background: linear-gradient(to bottom right, $gradient-start, $gradient-mid 50%, $gradient-stop);
+	height: 60px;
+	z-index:100;
+}
+
+#mobile-hidden {
+	@include display-off;
+}
+
+#mobile-hidden2 {
+	@include display-off;
+}
+
+#dropdown-button {
+	float: right;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 6px;
+	height: 80%;
+	width: 48px;
+	display: inline-block;
+
+	@include clickable;
+}
+
+#mobile-hidden {
+	list-style: none;
+}
+
+.carat {
+	border-style: solid;
+    border-width: 10px 10px 0px 10px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: black;
+    border-right-color: transparent;
+    width: 0px;
+    height: 0px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
