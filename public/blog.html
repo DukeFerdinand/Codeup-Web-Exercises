@@ -17,13 +17,14 @@
 
 		$.ajax('/data/blog.json').done(function(data, status, jqXhr) {
 
-			var category = '';
+			// var category = '';
 
 			for (var i = 0; i < data.length; i ++){
 
 
 				$('#posts').append('<h2>' + data[i].title + '</h2>'
-					+ '<h4>' + '<a href="#">' + data[i].categories.join(',  </a><a href ="#">')+ '</a>' + '</h4>' + '<p>' + data[i].content + '</p>'
+					+ '<h4>' + '<a href="#">' + data[i].categories.join(',  </a><a href ="#">')+ '</a>' + '</h4>' +
+					 '<p>' + data[i].content + '</p>'
 					);
 			}
 		}).fail(function(jqXhr, status, error){
