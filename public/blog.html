@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX Blog</title>
+</head>
+<body>
+	<h1>The Best Blog</h1>
+	<button id="get-posts">Get the Posts!</button>
+	<div id="posts"></div>
+
+<script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	'use strict';
+	$('#get-posts').click(function(){
+
+		$('#posts').html('');
+
+		$.ajax('/data/blog.json').done(function(data, status, jqXhr) {
+
+			var category = '';
+
+			for (var i = 0; i < data.length; i ++){
+
+
+				$('#posts').append('<h2>' + data[i].title + '</h2>'
+					+ '<h4>' + '<a href="#">' + data[i].categories.join(',  </a><a href ="#">')+ '</a>' + '</h4>' + '<p>' + data[i].content + '</p>'
+					);
+			}
+		}).fail(function(jqXhr, status, error){
+			console.log(status);
+			console.log(error);
+			console.log(jqXhr);
+		});
+		
+	});
+
+</script>
+</body>
+</html>
