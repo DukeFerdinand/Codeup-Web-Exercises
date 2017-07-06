@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Weather For San Antonio</title>
+	<style type="text/css">
+		html, body{
+			width: 95%;
+			margin: auto;
+		}
+		header, div {
+			text-align: center;
+		}
+		div {
+			background-color: #FCFCFC;
+			border: 2px solid black;
+			display: inline-block;
+			height: 200px;
+			width: 29%;
+			padding: 15px 10px 15px 10px;
+			margin: 0;
+		}
+		main div{
+			width: 13%;
+			padding-top: -5px;
+			overflow: scroll;
+			border-radius: 0 0 0 50px;
+		}
+		main {
+			width: 75%;
+			margin: auto;
+		}
+		section{
+			width: 75%;
+			height: auto;
+			padding: 10px;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		#today{
+			width: 30%;
+			margin: 0 auto;
+		}
+		.spacer{
+			width: 30%;
+			background-color: white;
+			border: none;
+			color: white;
+		}
+		@media screen (max-width: 500px){
+			.spacer{
+				display: none;
+			}
+			div{
+				width: 100%;
+			}
+		}
+
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Weather Application</h1>
+		<h2>San Antonio</h2>
+	</header>
+	<section>
+		<div class="spacer"></div>
+		<div id="today">
+			<span class="weather" id="temp1"></span>
+			<span class="icon" id="icon1"></span>
+			<span class="weather" id="cloud1"></span>
+			<span id="humidity1"></span>
+			<span id="wind1"></span>
+			<span id="pressure1"></span>
+		</div>
+	</section>
+	<main>
+		<div>
+			<span class="weather" id="temp2"></span>
+			<span class="icon" id="icon2"></span>
+			<span class="weather" id="cloud2"></span>
+			<span id="humidity2"></span>
+			<span id="wind2"></span>
+			<span id="pressure2"></span>
+		</div>
+		<div>
+			<span class="weather" id="temp3"></span>
+			<span class="icon" id="icon3"></span>
+			<span class="weather" id="cloud3"></span>
+			<span id="humidity3"></span>
+			<span id="wind3"></span>
+			<span id="pressure3"></span>
+		</div>
+		<div>
+			<span class="weather" id="temp4"></span>
+			<span class="icon" id="icon4"></span>
+			<span class="weather" id="cloud4"></span>
+			<span id="humidity4"></span>
+			<span id="wind4"></span>
+			<span id="pressure4"></span>
+		</div>
+		<div>
+			<span class="weather" id="temp5"></span>
+			<span class="icon" id="icon5"></span>
+			<span class="weather" id="cloud5"></span>
+			<span id="humidity5"></span>
+			<span id="wind5"></span>
+			<span id="pressure5"></span>
+		</div>
+		<div>
+			<span class="weather" id="temp6"></span>
+			<span class="icon" id="icon6"></span>
+			<span class="weather" id="cloud6"></span>
+			<span id="humidity6"></span>
+			<span id="wind6"></span>
+			<span id="pressure6"></span>
+		</div>
+		<div>
+			<span class="weather" id="temp7"></span>
+			<span class="icon" id="icon7"></span>
+			<span class="weather" id="cloud7"></span>
+			<span id="humidity7"></span>
+			<span id="wind7"></span>
+			<span id="pressure7"></span>
+		</div>
+	</main>
+
+<script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="/js/weather.js"></script>
+</body>
+</html>
