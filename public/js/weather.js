@@ -11,12 +11,10 @@ $.ajax("http://api.openweathermap.org/data/2.5/forecast/daily", {
     }
 
 }).done(function(data){
-	console.log(data)
-// 	console.log(data.city.name + ", " + data.city.country);
-// 	console.log(data.list[0].clouds);
-// 	$('.clouds').html("<strong>clouds: </strong>" + data.list[0].cloud)
+	//Using jQuery to sift through the API and find and display goodies relevent to the display
 	for (var i = 0; i < data.list.length; i++){
 		console.log(data.list[i].temp.max);
+		$('#city').html(data.city.name);
 		$('#temp' + (i + 1)).append("<h3>" + data.list[i].temp.max + '/' + data.list[i].temp.min + '℉ </h3>');
 		$('#icon' +(i + 1)).append("<img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon +".png'><br>");
 		$('#cloud' + (i + 1)).append("<strong>" + data.list[i].weather[0].main.toLowerCase() + ": </strong>" + data.list[i].weather[0].description + '<br>');

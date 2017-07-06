@@ -10,7 +10,7 @@ var mapOptions = {
 
 	//zoom level
 
-	zoom: 15,
+	zoom: 10,
 
 	// This sets the center of the map at our location
      // center: {
@@ -59,7 +59,7 @@ geocoder.geocode({ "address": query }, function(results, status) {
 		map: map
 });
 		var infowindow = new google.maps.InfoWindow({
-   		content: "<div><object type= 'text/html' data = 'http://codeup.dev/calculator.html' width = '400px' height = '400px'></object></div>"
+   		content: "<h1>Hello</h1>"
 });
 		infowindow.open(map, marker);
 

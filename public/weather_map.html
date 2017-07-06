@@ -7,6 +7,8 @@
 		html, body{
 			width: 95%;
 			margin: auto;
+			margin-bottom: 20px;
+			background-color: #FFF8DC;
 		}
 		header, div {
 			text-align: center;
@@ -24,11 +26,26 @@
 			width: 13%;
 			padding-top: -5px;
 			overflow: scroll;
-			border-radius: 0 0 0 50px;
+			border-radius: 0 25px 0 25px;
 		}
 		main {
 			width: 75%;
 			margin: auto;
+		}
+		my-map{
+			width: 100%;
+			height: 500px;
+			display: block;
+			background-color: green;
+			margin-top: 50px;
+		}
+		my-map div{
+			background-color: rgba(0,0,0,0);
+			border: 0;
+			margin: auto;
+			padding: auto;
+			width: auto;
+			height: auto;
 		}
 		section{
 			width: 75%;
@@ -41,10 +58,12 @@
 		#today{
 			width: 30%;
 			margin: 0 auto;
+			border-radius: 0 50px 0 50px;
 		}
 		.spacer{
 			width: 30%;
-			background-color: white;
+			height: 10px;
+			background-color: #FFF8DC;
 			border: none;
 			color: white;
 		}
@@ -63,7 +82,7 @@
 <body>
 	<header>
 		<h1>Weather Application</h1>
-		<h2>San Antonio</h2>
+		<h2 id="city">San Antonio</h2>
 	</header>
 	<section>
 		<div class="spacer"></div>
@@ -126,7 +145,10 @@
 			<span id="pressure7"></span>
 		</div>
 	</main>
+		<my-map id="map"></my-map>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoAdYB_zBlslu4GUUl9W9TS0hI2sRbBs"></script>
+<script type="text/javascript" src="/js/googlemaps.js"></script>
 <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="/js/weather.js"></script>
 </body>
