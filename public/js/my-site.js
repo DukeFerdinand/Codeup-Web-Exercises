@@ -1,7 +1,7 @@
 "use strict";
 
 $('button').click(function(){
-    $('#sidebar1-d').animate({
+    $('#sidebar1').animate({
         width: '200px',
         height: '200px'
     }, 1000).animate({
