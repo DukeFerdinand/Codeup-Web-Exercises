@@ -6,7 +6,7 @@ html, body {
   padding: 0;
   width: 1200px;
   height: 150%;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 #sidebar1 {
   margin-left: -600px;
@@ -29,7 +29,7 @@ html, body {
   box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
   background: #008800;
   float: right;
-  margin-right: -775px; }
+  margin-right: -700px; }
 
 #sidebar3 {
   margin-left: -600px;
@@ -39,9 +39,8 @@ html, body {
   -webkit-box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
   background: #880000;
-  float: right;
-  margin-top: 250px;
-  margin-right: 1025px; }
+  float: left;
+  margin-left: -700px; }
 
 #sidebar4 {
   background: #808080;

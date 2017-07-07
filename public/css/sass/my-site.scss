@@ -21,12 +21,12 @@ button {
 
 
 // @media only screen and (min-width: 700px){
-   html, body {
+html, body {
     margin: 0px;
     padding: 0;
     width: 1200px;
     height: 150%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #sidebar1 {
@@ -40,14 +40,14 @@ button {
     @include sidebars;
     background: #008800;
     float: right;
-    margin-right: -775px;
+    margin-right: -700px;
 }
 #sidebar3{
     @include sidebars;
     background: #880000;
-    float: right;
-    margin-top: 250px;
-    margin-right: 1025px;
+    float: left;
+    // margin-top: 250px;
+    margin-left: -700px;
 }
 #sidebar4{
     background: #808080;

@@ -49,12 +49,11 @@ geocoder.geocode({ "address": query }, function(results, status) {
        // Recenter the map over the address
     	map.setCenter(results[0].geometry.location);
 
-
-      	conversion = results[0].geometry.location
+      conversion = results[0].geometry.location
     	console.log(conversion);
 
 
-	    var marker = new google.maps.Marker({
+    var marker = new google.maps.Marker({
 		position: conversion,
 		map: map
 });
