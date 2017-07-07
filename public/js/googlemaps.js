@@ -56,10 +56,12 @@ geocoder.geocode({ "address": query }, function(results, status) {
     var marker = new google.maps.Marker({
 		position: conversion,
 		map: map
-});
+    });
+
 		var infowindow = new google.maps.InfoWindow({
    		content: "<h1>Hello</h1>"
-});
+    });
+    
 		infowindow.open(map, marker);
 
 

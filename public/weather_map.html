@@ -13,7 +13,8 @@
 		header, div {
 			text-align: center;
 		}
-		div {
+		weather-balloon {
+			text-align: center;
 			background-color: #FCFCFC;
 			border: 2px solid black;
 			display: inline-block;
@@ -22,7 +23,7 @@
 			padding: 15px 10px 15px 10px;
 			margin: 0;
 		}
-		main div{
+		main weather-balloon{
 			width: 13%;
 			padding-top: -5px;
 			overflow: scroll;
@@ -31,6 +32,8 @@
 		main {
 			width: 90%;
 			margin: auto;
+			display: flex;
+			justify-content: space-around;
 		}
 		my-map{
 			width: 100%;
@@ -90,70 +93,78 @@
 	</header>
 	<section id="flex-test">
 <!-- 		<div class="spacer"></div> -->
-		<div id="today">
+		<weather-balloon id="today">
+			<span id="date1"></span>
 			<span class="weather" id="temp1"></span>
 			<span class="icon" id="icon1"></span>
 			<span class="weather" id="cloud1"></span>
 			<span id="humidity1"></span>
 			<span id="wind1"></span>
 			<span id="pressure1"></span>
-		</div>
+		</weather-balloon>
 	</section>
 	<main>
-		<div>
+		<weather-balloon>
+			<span id="date2"></span>
 			<span class="weather" id="temp2"></span>
 			<span class="icon" id="icon2"></span>
 			<span class="weather" id="cloud2"></span>
 			<span id="humidity2"></span>
 			<span id="wind2"></span>
 			<span id="pressure2"></span>
-		</div>
-		<div>
+		</weather-balloon>
+		<weather-balloon>
+			<span id="date3"></span>
 			<span class="weather" id="temp3"></span>
 			<span class="icon" id="icon3"></span>
 			<span class="weather" id="cloud3"></span>
 			<span id="humidity3"></span>
 			<span id="wind3"></span>
 			<span id="pressure3"></span>
-		</div>
-		<div>
+		</weather-balloon>
+		<weather-balloon>
+			<span id="date4"></span>
 			<span class="weather" id="temp4"></span>
 			<span class="icon" id="icon4"></span>
 			<span class="weather" id="cloud4"></span>
 			<span id="humidity4"></span>
 			<span id="wind4"></span>
 			<span id="pressure4"></span>
-		</div>
-		<div>
+		</weather-balloon>
+		<weather-balloon>
+			<span id="date5"></span>
 			<span class="weather" id="temp5"></span>
 			<span class="icon" id="icon5"></span>
 			<span class="weather" id="cloud5"></span>
 			<span id="humidity5"></span>
 			<span id="wind5"></span>
 			<span id="pressure5"></span>
-		</div>
-		<div>
+		</weather-balloon>
+		<weather-balloon>
+			<span id="date6"></span>
 			<span class="weather" id="temp6"></span>
 			<span class="icon" id="icon6"></span>
 			<span class="weather" id="cloud6"></span>
 			<span id="humidity6"></span>
 			<span id="wind6"></span>
 			<span id="pressure6"></span>
-		</div>
-		<div>
+		</weather-balloon>
+		<weather-balloon>
+			<span id="date7"></span>
 			<span class="weather" id="temp7"></span>
 			<span class="icon" id="icon7"></span>
 			<span class="weather" id="cloud7"></span>
 			<span id="humidity7"></span>
 			<span id="wind7"></span>
 			<span id="pressure7"></span>
-		</div>
+		</weather-balloon>
 	</main>
 		<my-map id="map"></my-map>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoAdYB_zBlslu4GUUl9W9TS0hI2sRbBs"></script>
-<script type="text/javascript" src="/js/googlemaps.js"></script>
+<!-- <script type="text/javascript" src="/js/googlemaps.js"></script> -->
 <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="/js/weather.js"></script>
+<script type="text/javascript" src="/js/weather-maps.js"></script>
 </body>
 </html>
