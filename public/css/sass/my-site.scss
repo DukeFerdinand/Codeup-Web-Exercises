@@ -16,7 +16,6 @@ $breakpoint-small: 30em;
 
 button {
     width: 100%;
-    height: 5%;
 }
 
 
@@ -41,7 +40,7 @@ button {
     @include sidebars;
     background: #008800;
     float: right;
-    margin-right: -700px;
+    margin-right: -775px;
 }
 #sidebar3{
     @include sidebars;
