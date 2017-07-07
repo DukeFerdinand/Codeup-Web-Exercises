@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin");
 html, body {
   margin: 0px;
   padding: 0;
@@ -10,7 +11,7 @@ button {
 
 ul {
   margin-top: -3px;
-  margin-left: -25px;
+  margin-left: -40px;
   width: 100%;
   position: relative;
   z-index: -30000000;
@@ -18,28 +19,35 @@ ul {
 
 #hidden1 {
   padding-top: 15px;
-  background-color: #4909AF; }
+  font-size: 4em;
+  font-family: 'Cabin', sans-serif;
+  color: #F0F0F0; }
 
 #hidden2 {
-  background-color: #4909AF; }
+  font-size: 4em;
+  font-family: 'Cabin', sans-serif;
+  color: #F0F0F0; }
 
 #hidden3 {
-  background-color: #4909AF; }
+  font-size: 4em;
+  font-family: 'Cabin', sans-serif;
+  color: #F0F0F0; }
 
 #title {
   display: inline-block;
   margin-left: 50px;
   font-size: 4em;
   color: #F0F0F0;
-  font-family: helvetica; }
+  font-family: helvetica;
+  font-family: 'Cabin', sans-serif; }
 
 #mobile-navbar {
   width: 100%;
   margin: 0;
-  background: -webkit-gradient(linear, left top, right bottom, from(#335), color-stop(55%, #567), to(#AAA));
-  background: -webkit-linear-gradient(top left, #335, #567 55%, #AAA);
-  background: -o-linear-gradient(top left, #335, #567 55%, #AAA);
-  background: linear-gradient(to bottom right, #335, #567 55%, #AAA);
+  background: -webkit-gradient(linear, left top, right bottom, from(#335), color-stop(55%, #567), to(#AAC));
+  background: -webkit-linear-gradient(top left, #335, #567 55%, #AAC);
+  background: -o-linear-gradient(top left, #335, #567 55%, #AAC);
+  background: linear-gradient(to bottom right, #335, #567 55%, #AAC);
   height: 150px;
   position: relative;
   z-index: 100; }
@@ -49,6 +57,12 @@ ul {
 
 #mobile-hidden2 {
   display: none; }
+
+.dropdown {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  background: #567; }
 
 #dropdown-button {
   float: right;

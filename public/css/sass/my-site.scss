@@ -1,10 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
 $whitish: #EEEEFF;
 $breakpoint-small: 30em;
 $whitish: #F0F0F0;
 $breakpoint-sm: 30em;
 $gradient-start: #335;
 $gradient-mid: #567;
-$gradient-stop: #AAA;
+$gradient-stop: #AAC;
+
+@mixin dropdown-fonts{
+    font-size: 4em;
+    font-family: 'Cabin', sans-serif;
+    color: $whitish;
+    // font-weight: bold;
+
+}
 
 @mixin sidebars {
     margin-left: -600px;
@@ -52,7 +62,7 @@ button {
 
 ul {
     margin-top: -3px;
-    margin-left: -25px;
+    margin-left: -40px;
     width: 100%;
     position: relative;
     z-index: -30000000;
@@ -62,13 +72,14 @@ ul {
 
 #hidden1 {
     padding-top: 15px;
-    background-color: #4909AF;
+    @include dropdown-fonts;
+
 }
 #hidden2{
-    background-color: #4909AF;
+    @include dropdown-fonts;
 }
 #hidden3{
-    background-color: #4909AF;
+    @include dropdown-fonts;
 }
 #title {
     display: inline-block;
@@ -76,6 +87,7 @@ ul {
     font-size: 4em;
     color: $whitish;
     font-family: helvetica;
+    font-family: 'Cabin', sans-serif;
 }
 #mobile-navbar {
     width: 100%;
@@ -95,7 +107,10 @@ ul {
 }
 
 .dropdown{
-
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background: #567;
 }
 
 #dropdown-button {
