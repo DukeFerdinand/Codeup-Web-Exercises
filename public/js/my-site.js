@@ -6,6 +6,7 @@ $('#dropdown-button').click(function(){
 
 
 $('#hidden1').click(function(){
+    $('#mobile-hidden').fadeToggle(200);
     $('#sidebar1').animate({
         width: '800px',
         height: '800px',
