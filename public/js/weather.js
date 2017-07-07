@@ -115,7 +115,7 @@ google.maps.event.addListener(map, 'click', function (e) {
 				}
 			}
 			$('#date' + (i + 1)).text(today);
-			$('#temp' + (i + 1)).html("<h3>" + data.list[i].temp.max + '/' + data.list[i].temp.min + '℉ </h3>');
+			$('#temp' + (i + 1)).html("<h3>" + data.list[i].temp.max + '/' + data.list[i].temp.min + '°F </h3>');
 			$('#icon' +(i + 1)).html("<img src='http://openweathermap.org/img/w/" + data.list[i].weather[0].icon +".png'><br>");
 			$('#cloud' + (i + 1)).html("<strong>" + data.list[i].weather[0].main.toLowerCase() + ": </strong>" + data.list[i].weather[0].description + '<br>');
 			$('#humidity' + (i + 1)).html("<strong>humidity: </strong>" + data.list[i].humidity + '<br>');
