@@ -1,4 +1,9 @@
 "use strict";
+//Adds dropdown function to upper menu bar
+$('#dropdown-button').click(function(){
+    $('#mobile-hidden').fadeToggle(200);
+});
+
 
 $('button').click(function(){
     $('#sidebar1').animate({
