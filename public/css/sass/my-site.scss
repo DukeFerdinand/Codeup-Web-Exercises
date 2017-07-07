@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Cabin|Raleway');
 
 $whitish: #EEEEFF;
 $breakpoint-small: 30em;
@@ -17,7 +17,7 @@ $gradient-stop: #AAC;
 }
 
 @mixin par-fonts {
-    font-family: helvetica;
+    font-family: 'Raleway', sans-serif;
 }
 
 @mixin sidebars {
