@@ -29,7 +29,7 @@
 			border-radius: 0 25px 0 25px;
 		}
 		main {
-			width: 75%;
+			width: 90%;
 			margin: auto;
 		}
 		my-map{
@@ -60,13 +60,17 @@
 			margin: 0 auto;
 			border-radius: 0 50px 0 50px;
 		}
-		.spacer{
+		#flex-test {
+			display: flex;
+			justify-content: center;
+		}
+		/*.spacer{
 			width: 30%;
 			height: 10px;
 			background-color: #FFF8DC;
 			border: none;
 			color: white;
-		}
+		}*/
 		@media screen (max-width: 500px){
 			.spacer{
 				display: none;
@@ -84,8 +88,8 @@
 		<h1>Weather Application</h1>
 		<h2 id="city">San Antonio</h2>
 	</header>
-	<section>
-		<div class="spacer"></div>
+	<section id="flex-test">
+<!-- 		<div class="spacer"></div> -->
 		<div id="today">
 			<span class="weather" id="temp1"></span>
 			<span class="icon" id="icon1"></span>
