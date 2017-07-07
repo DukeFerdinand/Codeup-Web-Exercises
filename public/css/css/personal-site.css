@@ -15,16 +15,20 @@ ul {
   background-color: #4909AF; }
 
 #title {
-  display: inline-block; }
+  display: inline-block;
+  margin-left: 50px;
+  font-size: 4em;
+  color: #F0F0F0;
+  font-family: helvetica; }
 
 #mobile-navbar {
   width: 100%;
   margin: 0;
-  background: -webkit-gradient(linear, left top, right bottom, from(#777), color-stop(50%, #999), to(#AAA));
-  background: -webkit-linear-gradient(top left, #777, #999 50%, #AAA);
-  background: -o-linear-gradient(top left, #777, #999 50%, #AAA);
-  background: linear-gradient(to bottom right, #777, #999 50%, #AAA);
-  height: 60px;
+  background: -webkit-gradient(linear, left top, right bottom, from(#335), color-stop(60%, #567), to(#AAA));
+  background: -webkit-linear-gradient(top left, #335, #567 60%, #AAA);
+  background: -o-linear-gradient(top left, #335, #567 60%, #AAA);
+  background: linear-gradient(to bottom right, #335, #567 60%, #AAA);
+  height: 150px;
   z-index: 100; }
 
 #mobile-hidden {
@@ -39,7 +43,7 @@ ul {
   border-radius: 10px;
   margin: 6px;
   height: 80%;
-  width: 48px;
+  width: 100px;
   display: inline-block;
   cursor: pointer;
   -webkit-user-select: none;
@@ -52,10 +56,10 @@ ul {
 
 .carat {
   border-style: solid;
-  border-width: 10px 10px 0px 10px;
+  border-width: 20px 20px 0px 20px;
   border-bottom-color: transparent;
   border-left-color: transparent;
-  border-top-color: black;
+  border-top-color: #F0F0F0;
   border-right-color: transparent;
   width: 0px;
   height: 0px;
