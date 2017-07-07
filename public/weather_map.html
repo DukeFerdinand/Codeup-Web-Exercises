@@ -4,11 +4,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Weather For San Antonio</title>
 	<style type="text/css">
+		* {
+			font-family: helvetica;
+		}
 		html, body{
 			width: 95%;
 			margin: auto;
 			margin-bottom: 20px;
-			background-color: #FFF8DC;
+			background: linear-gradient(#F0F0F0, #AAA);
+			padding-bottom: 250px;
 		}
 		header, div {
 			text-align: center;
@@ -35,8 +39,14 @@
 			display: flex;
 			justify-content: space-around;
 		}
-		my-map{
+		map-container {
+			display: flex;
+			justify-content: center;
 			width: 100%;
+			margin-bottom: 50px;
+		}
+		my-map{
+			width: 50%;
 			height: 500px;
 			display: block;
 			background-color: green;
@@ -91,6 +101,9 @@
 		<h1>Weather Application</h1>
 		<h2 id="city">San Antonio</h2>
 	</header>
+	<map-container>
+		<my-map id="map"></my-map>
+	</map-container>
 	<section id="flex-test">
 <!-- 		<div class="spacer"></div> -->
 		<weather-balloon id="today">
@@ -159,12 +172,11 @@
 			<span id="pressure7"></span>
 		</weather-balloon>
 	</main>
-		<my-map id="map"></my-map>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnoAdYB_zBlslu4GUUl9W9TS0hI2sRbBs"></script>
 <!-- <script type="text/javascript" src="/js/googlemaps.js"></script> -->
 <script type="text/javascript" src="/js/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="/js/weather.js"></script>
-<script type="text/javascript" src="/js/weather-maps.js"></script>
+<!-- <script type="text/javascript" src="/js/weather-maps.js"></script> -->
 </body>
 </html>
