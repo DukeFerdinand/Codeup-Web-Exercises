@@ -1,5 +1,10 @@
 $whitish: #EEEEFF;
 $breakpoint-small: 30em;
+$whitish: #F0F0F0;
+$breakpoint-sm: 30em;
+$gradient-start: #335;
+$gradient-mid: #567;
+$gradient-stop: #AAA;
 
 @mixin sidebars {
     margin-left: -600px;
@@ -13,10 +18,16 @@ $breakpoint-small: 30em;
     user-select: none;
 }
 
-
-button {
-    width: 100%;
+@mixin clickable {
+    cursor: pointer;
+    user-select: none;
 }
+
+@mixin display-off {
+    display: none;
+}
+
+
 
 
 
@@ -28,7 +39,101 @@ html, body {
     height: 150%;
     overflow-x: hidden;
 }
+// html, body{
+//  padding: 0;
+//  margin: 0;
+// }
+button {
+    width: 100%;
+}
 
+// This is for the mobile default state
+
+
+ul {
+    margin-top: -3px;
+    margin-left: -25px;
+    width: 100%;
+    position: relative;
+    z-index: -30000000;
+
+    list-style: none;
+}
+
+#hidden1 {
+    padding-top: 15px;
+    background-color: #4909AF;
+}
+#hidden2{
+    background-color: #4909AF;
+}
+#hidden3{
+    background-color: #4909AF;
+}
+#title {
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 4em;
+    color: $whitish;
+    font-family: helvetica;
+}
+#mobile-navbar {
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom right, $gradient-start, $gradient-mid 55%, $gradient-stop);
+    height: 150px;
+    position: relative;
+    z-index:100;
+}
+
+#mobile-hidden {
+    @include display-off;
+}
+
+#mobile-hidden2 {
+    @include display-off;
+}
+
+.dropdown{
+
+}
+
+#dropdown-button {
+    float: right;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 6px;
+    height: 80%;
+    width: 100px;
+    display: inline-block;
+
+    @include clickable;
+}
+
+#mobile-hidden {
+    list-style: none;
+}
+
+.carat {
+    border-style: solid;
+    border-width: 20px 20px 0px 20px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: $whitish;
+    border-right-color: transparent;
+    width: 0px;
+    height: 0px;
+    display: block;
+    margin-top: 20px;
+    margin-left: 14px;
+}
+//======================
+//  End Nav, begin Content
+//=======================
+
+//The moving divs
+
+//blue
 #sidebar1 {
     @include sidebars;
     margin-top: 10%;
@@ -36,19 +141,25 @@ html, body {
     background: #000088;
     text-align: right;
 }
+
+//green
 #sidebar2 {
     @include sidebars;
     background: #008800;
     float: right;
-    margin-right: -700px;
+    margin-right: -800px;
 }
+
+//red
 #sidebar3{
     @include sidebars;
     background: #880000;
     float: left;
     // margin-top: 250px;
-    margin-left: -700px;
+    margin-left: -800px;
 }
+
+//gray
 #sidebar4{
     background: #808080;
     width: 20.8333%;
@@ -59,7 +170,7 @@ html, body {
     left: -110px;
     z-index: -3;
 }
-
+//Profile Pic
 #profile{
     @include cursor-selects;
     position:absolute;
