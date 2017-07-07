@@ -7,15 +7,15 @@ $('#dropdown-button').click(function(){
 
 $('button').click(function(){
     $('#sidebar1').animate({
-        width: '400px',
-        height: '400px',
+        width: '800px',
+        height: '800px',
         'margin-top': '50px'
-    }, 1000).animate({
+    }, 800).animate({
         'margin-left': '200px',
         'border-radius': '10px',
         'box-shadow': '3px 3px 3px rgba(0,0,0,0.5)'
     }, {
-        duration: 500,
+        duration: 250,
         complete: function(){
             $('.hidden-profile').animate({
                 opacity: 1
