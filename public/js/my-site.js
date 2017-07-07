@@ -5,7 +5,7 @@ $('#dropdown-button').click(function(){
 });
 
 
-$('button').click(function(){
+$('#hidden1').click(function(){
     $('#sidebar1').animate({
         width: '800px',
         height: '800px',
