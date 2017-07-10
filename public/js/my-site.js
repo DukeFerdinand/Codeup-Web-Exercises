@@ -13,7 +13,7 @@ $('#hidden1').click(function(){
         width: '800px',
         height: '800px',
         'margin-top': '50px'
-    }, 500).animate({
+    }, 400).animate({
         'box-shadow': '3px 3px 3px rgba(0,0,0,0.5)'
     }, {
         duration: 250,
@@ -25,4 +25,13 @@ $('#hidden1').click(function(){
             })
         }
     })
+})
+
+$('#hidden2').click(function(){
+    $('#mobile-hidden').slideToggle(100);
+    $('#sidebar1').animate({
+        'margin-left': '-1000px',
+        height: '0px',
+        width: '0px'
+    }, 400)
 })

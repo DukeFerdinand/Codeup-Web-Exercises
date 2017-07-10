@@ -29,11 +29,11 @@ google.maps.event.addListener(map, 'click', function (e) {
     //Determine the location where the user has clicked.
     var location = e.latLng;
     //Create a marker and placed it on the map.
-    if (markerCount >= 1) {
+    if (markerCount != 0) {
     	marker.setMap(null);
     	
     }
-
+    //new marker
     marker = new google.maps.Marker({
         position: location,
         map: map
@@ -47,8 +47,8 @@ google.maps.event.addListener(map, 'click', function (e) {
         });
         infoWindow.open(map, marker);
     });
-    console.log(location.lat());
-    console.log(location.lng());
+    // console.log(location.lat());
+    // console.log(location.lng());
         Lat = location.lat();
         Lon = location.lng();
         getWeather(Lat, Lon);

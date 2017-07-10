@@ -24,9 +24,6 @@ ul {
 #mobile-navbar {
   width: 100%;
   margin: 0;
-  background: -webkit-gradient(linear, left top, right bottom, from(#335), color-stop(60%, #567), to(#AAA));
-  background: -webkit-linear-gradient(top left, #335, #567 60%, #AAA);
-  background: -o-linear-gradient(top left, #335, #567 60%, #AAA);
   background: linear-gradient(to bottom right, #335, #567 60%, #AAA);
   height: 150px;
   z-index: 100; }
@@ -46,9 +43,6 @@ ul {
   width: 100px;
   display: inline-block;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none; }
 
 #mobile-hidden {
@@ -66,3 +60,5 @@ ul {
   display: block;
   margin-top: 20px;
   margin-left: 14px; }
+
+/*# sourceMappingURL=personal-site.css.map */

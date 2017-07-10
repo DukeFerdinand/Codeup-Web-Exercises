@@ -35,9 +35,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -50,9 +47,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -65,9 +59,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -80,9 +71,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -95,9 +83,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -110,9 +95,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -125,9 +107,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -140,9 +119,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -155,9 +131,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -170,9 +143,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -185,9 +155,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -200,9 +167,6 @@ img {
   height: 3em;
   display: inline-block;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   cursor: pointer;
   border: 1px solid black;
@@ -236,17 +200,14 @@ div #C {
   background-color: #904848; }
   div #C:hover {
     background-color: #663333; }
-
 div #decimal {
   background-color: darkgray; }
   div #decimal:hover {
     background-color: gray; }
-
 div #answer {
   background-color: green; }
   div #answer:hover {
     background-color: darkgreen; }
-
 div .operators {
   background-color: blue; }
   div .operators:hover {
@@ -256,28 +217,35 @@ div .operators {
   .column-* {
     padding-top: .5em;
     height: 4em; }
+
   .column-1 {
     width: 19%; }
+
   .column-3 {
     width: 58%; }
+
   .spacer {
     width: 12%; }
+
   #left-operand {
     margin-bottom: -1em; } }
-
 @media only screen and (min-width: 500px) {
   .column-* {
     height: 4em;
     padding-top: .5em; }
+
   .column-1 {
     font-size: 1.5em; }
+
   .column-3 {
     height: 3em;
     font-size: 1.5em; }
+
   #left-operand {
     margin-bottom: -1em; } }
-
 @media only screen and (min-width: 750px) {
   .column-* {
     height: 4em;
     font-size: 1.7em; } }
+
+/*# sourceMappingURL=sass-grid.css.map */

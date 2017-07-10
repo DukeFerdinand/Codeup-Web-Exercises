@@ -23,7 +23,7 @@ $gradient-stop: #AAC;
 @mixin sidebars {
     margin-left: -600px;
     width: 70.8333%;
-    height: 377.778%;
+    height: 100%;
     border-radius: 600px;
     box-shadow: 3px -3px 3px rgba(0,0,0,0.5);
 }
@@ -79,8 +79,9 @@ ul {
     @include par-fonts;
 }
 
-#about-par{
+.about-par{
     width: 80%;
+    text-indent: 3em;
 }
 
 #hidden1 {
@@ -173,7 +174,7 @@ ul {
 //green
 #sidebar2 {
     @include sidebars;
-    background: #008800;
+    background: #000;
     float: right;
     margin-right: -800px;
 }
@@ -181,7 +182,7 @@ ul {
 //red
 #sidebar3{
     @include sidebars;
-    background: #880000;
+    background: #000;
     float: left;
     // margin-top: 250px;
     margin-left: -800px;

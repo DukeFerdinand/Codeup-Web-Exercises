@@ -16,19 +16,14 @@ ul {
   list-style: none; }
 
 .par-cont {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   font-size: 2em;
   font-family: 'Raleway', sans-serif; }
 
-#about-par {
-  width: 80%; }
+.about-par {
+  width: 80%;
+  text-indent: 3em; }
 
 #hidden1 {
   padding-top: 15px;
@@ -57,9 +52,6 @@ ul {
 #mobile-navbar {
   width: 100%;
   margin: 0;
-  background: -webkit-gradient(linear, left top, right bottom, from(#335), color-stop(55%, #567), to(#AAC));
-  background: -webkit-linear-gradient(top left, #335, #567 55%, #AAC);
-  background: -o-linear-gradient(top left, #335, #567 55%, #AAC);
   background: linear-gradient(to bottom right, #335, #567 55%, #AAC);
   height: 150px;
   position: relative;
@@ -86,9 +78,6 @@ ul {
   width: 100px;
   display: inline-block;
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none; }
 
 #mobile-hidden {
@@ -110,9 +99,8 @@ ul {
 #sidebar1 {
   margin-left: -600px;
   width: 70.8333%;
-  height: 377.778%;
+  height: 100%;
   border-radius: 600px;
-  -webkit-box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
   margin-top: 10%;
   clear: left;
@@ -122,22 +110,20 @@ ul {
 #sidebar2 {
   margin-left: -600px;
   width: 70.8333%;
-  height: 377.778%;
+  height: 100%;
   border-radius: 600px;
-  -webkit-box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
-  background: #008800;
+  background: #000;
   float: right;
   margin-right: -800px; }
 
 #sidebar3 {
   margin-left: -600px;
   width: 70.8333%;
-  height: 377.778%;
+  height: 100%;
   border-radius: 600px;
-  -webkit-box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
   box-shadow: 3px -3px 3px rgba(0, 0, 0, 0.5);
-  background: #880000;
+  background: #000;
   float: left;
   margin-left: -800px; }
 
@@ -153,9 +139,6 @@ ul {
 
 #profile {
   cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   position: absolute;
   top: 200px;
@@ -168,3 +151,5 @@ ul {
   height: 770px;
   width: 770px;
   opacity: 0; }
+
+/*# sourceMappingURL=my-site.css.map */
