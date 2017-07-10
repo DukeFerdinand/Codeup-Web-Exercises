@@ -47,15 +47,14 @@ google.maps.event.addListener(map, 'click', function (e) {
         });
         infoWindow.open(map, marker);
     });
-    // console.log(location.lat());
-    // console.log(location.lng());
+   
         Lat = location.lat();
         Lon = location.lng();
         getWeather(Lat, Lon);
 });
 
 
-// console.log('Hello World!')
+
 	function getWeather (Lat, Lon){
 		$.ajax("http://api.openweathermap.org/data/2.5/forecast/daily", {
 
@@ -69,14 +68,14 @@ google.maps.event.addListener(map, 'click', function (e) {
 
 	}).done(function(data){
 		//Using jQuery to sift through the API and find and display goodies relevent to the display
-			// console.log(data)
+			
 			var today;
 			var date = new Date();
 			
 
 		for (var i = 0; i < data.list.length; i++){
 
-			// console.log(data.list[i].temp.max);
+		
 
 			$('#city').html("Current City: " + data.city.name);
 
@@ -85,7 +84,7 @@ google.maps.event.addListener(map, 'click', function (e) {
 				today = date.getDay();
 				today = today + i;
 				today = (today % 7);
-				// console.log(today);
+				
 			switch (today) {
 				case 1:
 					today = "Monday";
