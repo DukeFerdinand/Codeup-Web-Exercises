@@ -1,8 +1,0 @@
-@import "sass-grid.css";
-@import "gridmixins.scss";
-
-body {
-	@include radial;
-
-	height: viewport;
-}

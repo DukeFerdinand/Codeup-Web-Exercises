@@ -1,0 +1,19 @@
+[
+	{
+		"name": "placeholder",
+
+		"class": "placeholder-class"
+	},
+	{
+		"userstats": {
+
+			"HP": 250,
+			"MANA": 25,
+			"gold": 0
+
+		}
+	},
+	{
+		""
+	}
+]

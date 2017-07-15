@@ -1,222 +1,225 @@
-@import "gridvariables.scss"; // gets variables
-@import "gridmixins.scss";// gets mixins
+// @import "gridvariables.scss"; // gets variables
+// @import "gridmixins.scss";// gets mixins
 
 
-//========================================================================
-//		This Grid targets mobile first. This is the defualt section
-//========================================================================
+// //========================================================================
+// //		This Grid targets mobile first. This is the defualt section
+// //========================================================================
 
 
-//sets the clears to make the grid STAY a grid
-%clearfix {
-    *zoom: 1;
-    &:before, 
-    &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
+// //sets the clears to make the grid STAY a grid
+// %clearfix {
+//     *zoom: 1;
+//     &:before, 
+//     &:after {
+//         content: " ";
+//         display: table;
+//     }
+//     &:after {
+//         clear: both;
+//     }
+// }
 
-*, *:after, *:before {
-    margin: 0;
-    padding: 0;
-    @include border-box;
-}
-
-
+// *, *:after, *:before {
+//     margin: 0;
+//     padding: 0;
+//     @include border-box;
+// }
 
 
-//This ensures that images behave nicely
-img {
-    width: auto;
-    max-width: 100%;
-    height: auto !important; 
-}
-//sets width of container using variable
-.wrapper {
-	width: 95%;
-	max-width: $grid-max-width;
-}
+
+
+// //This ensures that images behave nicely
+// img {
+//     width: auto;
+//     max-width: 100%;
+//     height: auto !important; 
+// }
+// //sets width of container using variable
+// .wrapper {
+// 	width: 95%;
+// 	max-width: $grid-max-width;
+// }
  
-.row {
+// .row {
 	
-    margin-top:$grid-spacing;
+//     margin-top:$grid-spacing;
 
-}
-//applies grid clear to wrapper and rows
-.wrapper,
-.row {
-    @extend %clearfix;
-}
-
-
-//========================================================================
-//		This for loop assigns the widths for all the columns 
-//========================================================================
+// }
+// //applies grid clear to wrapper and rows
+// .wrapper,
+// .row {
+//     @extend %clearfix;
+// }
 
 
-@for $i from 1 through 12 {
-	.column-#{$i}{
-		width: 100% / $grid-columns * $i;
-		padding-top: 1em;
-		height: 3em;
-		display: inline-block;
-		text-align: center;
-		user-select: none;
-		cursor: pointer;
-		border: 1px solid black;
-		border-radius: 5px;
-		font-size: 1.5em;
-
-	}
-
-}
+// //========================================================================
+// //		This for loop assigns the widths for all the columns 
+// //========================================================================
 
 
-//========================================================================
-//
-//		Adding formatting to buttons?
-//		IMPORTANT: This section only applies to Calculator
-//		Not the whole grid system
-//
-//========================================================================
+// @for $i from 1 through 12 {
+// 	.column-#{$i}{
+// 		width: 100% / $grid-columns * $i;
+// 		padding-top: 1em;
+// 		height: 3em;
+// 		display: inline-block;
+// 		text-align: center;
+// 		user-select: none;
+// 		cursor: pointer;
+// 		border: 1px solid black;
+// 		border-radius: 5px;
+// 		font-size: 1.5em;
 
-//Invidible "columns" to provide space
-.spacer {
-	width:5%;
-	border: none;
-	padding-top: 0;
-	height:.5em;
-	cursor: normal;
-}
+// 	}
 
-
-#left-operand {
-	background-color: white;
-	display: inline-block;
-	text-align: right;
-	overflow: scroll;
-	margin-bottom: -.2em;
-}
-
-.button {
-	color: white;
-}
+// }
 
 
-.number {
-	background-color: red;
-	color: white;
-	&:hover{
-		background-color: darkred;
-	}
-}
+// //========================================================================
+// //
+// //		Adding formatting to buttons?
+// //		IMPORTANT: This section only applies to Calculator
+// //		Not the whole grid system
+// //
+// //========================================================================
 
-//========================================================================
-//		Setting special buttons color and :hover
-//		IMPORTANT: This section only applies to Calculator
-//		Not the whole grid system
-//========================================================================
+// //Invidible "columns" to provide space
+// .spacer {
+// 	width:5%;
+// 	border: none;
+// 	padding-top: 0;
+// 	height:.5em;
+// 	cursor: normal;
+// }
 
-div {
-	#C {
-		background-color: #904848;
 
-		&:hover {
-			background-color: #663333;
-		}
-	}
-	#decimal {
-		background-color: darkgray;
+// #left-operand {
+// 	background-color: white;
+// 	display: inline-block;
+// 	text-align: right;
+// 	overflow: scroll;
+// 	margin-bottom: -.2em;
+// }
 
-		&:hover {
-			background-color: gray;
-		}
-	}
+// .button {
+// 	color: white;
+// }
 
-	#answer {
-		background-color: green;
 
-		&:hover{
-			background-color: darkgreen;
-		}
-	}
+// .number {
+// 	background-color: red;
+// 	color: white;
+// 	&:hover{
+// 		background-color: darkred;
+// 	}
+// }
 
-	.operators {
-		background-color: blue;
+// //========================================================================
+// //		Setting special buttons color and :hover
+// //		IMPORTANT: This section only applies to Calculator
+// //		Not the whole grid system
+// //========================================================================
 
-		&:hover {
-			background-color: darkblue;
-		}
-	}
+// div {
+// 	#C {
+// 		background-color: #904848;
+
+// 		&:hover {
+// 			background-color: #663333;
+// 		}
+// 	}
+// 	#decimal {
+// 		background-color: darkgray;
+
+// 		&:hover {
+// 			background-color: gray;
+// 		}
+// 	}
+
+// 	#answer {
+// 		background-color: green;
+
+// 		&:hover{
+// 			background-color: darkgreen;
+// 		}
+// 	}
+
+// 	.operators {
+// 		background-color: blue;
+
+// 		&:hover {
+// 			background-color: darkblue;
+// 		}
+// 	}
 	
-}
+// }
 
-//========================================================================
-//		TODO: add small section
-//========================================================================
-@media #{$breakpoint-small} {
-	.column-* {
-		padding-top:.5em;
-		height: 4em;
-	}
-	.column-1 {
-		width: 19%;
-	}
-	.column-3 {
-		width: 58%;
-	}
-	.spacer {
-		width: 12%;
-	}
-	#left-operand {
-		margin-bottom: -1em;
-	}
+// //========================================================================
+// //		TODO: add small section
+// //========================================================================
+// @media #{$breakpoint-small} {
+// 	.column-* {
+// 		padding-top:.5em;
+// 		height: 4em;
+// 	}
+// 	.column-1 {
+// 		width: 19%;
+// 	}
+// 	.column-3 {
+// 		width: 58%;
+// 	}
+// 	.spacer {
+// 		width: 12%;
+// 	}
+// 	#left-operand {
+// 		margin-bottom: -1em;
+// 	}
 
-}
+// }
 
 
-//========================================================================
-//		Medium changes
-//========================================================================
+// //========================================================================
+// //		Medium changes
+// //========================================================================
 
-@media #{$breakpoint-medium} {
-	.column-* {
-		height: 4em;
-		padding-top:.5em;
-	}
-	.column-1 {
+// @media #{$breakpoint-medium} {
+// 	.column-* {
+// 		height: 4em;
+// 		padding-top:.5em;
+// 	}
+// 	.column-1 {
 		
-		font-size: 1.5em;
-	}
-	.column-3 {
-		height: 3em;
-		font-size: 1.5em;
+// 		font-size: 1.5em;
+// 	}
+// 	.column-3 {
+// 		height: 3em;
+// 		font-size: 1.5em;
 
-	}
-	#left-operand {
-		margin-bottom: -1em;
-	}
+// 	}
+// 	#left-operand {
+// 		margin-bottom: -1em;
+// 	}
 
-}
+// }
 
-//========================================================================
-//		Large changes
-//========================================================================
+// //========================================================================
+// //		Large changes
+// //========================================================================
 
-@media #{$breakpoint-large}{ 
-	.column-* {
-		height: 4em;
-		font-size: 1.7em;
+// @media #{$breakpoint-large}{ 
+// 	.column-* {
+// 		height: 4em;
+// 		font-size: 1.7em;
 
-	}
+// 	}
 	
+// }
+
+.row {
+	display: flex;
+	justify-content: center;
 }
-
-
 
 
 
