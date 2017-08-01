@@ -1,0 +1,85 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\000033}}
+.button, .operators {
+  cursor: pointer;
+  user-select: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\000037}}
+  .button:active, .operators:active {
+    box-shadow: 0px 0px 10px 5px #202020 inset; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000312}}
+main, .button, .text-fields {
+  border-radius: 10px; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000317}}
+* {
+  text-align: center; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000321}}
+body {
+  background: #D1D5D8; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000324}}
+main {
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 80%;
+  border: 1px solid black;
+  padding: 5%;
+  background: #475577;
+  box-shadow: 0px 0px 8px 3px #202020; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000334}}
+#C {
+  background: #B8312F; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000337}}
+#answer {
+  background: #41A85F; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000340}}
+#decimal {
+  background: #F37934; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000344}}
+.row {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 90%; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000351}}
+.number {
+  background: #876bb4; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000354}}
+.button {
+  width: 25%;
+  height: 50px;
+  border: 1px solid black;
+  margin: 3px;
+  font-size: 1.5em;
+  color: #EFEFEF;
+  padding-top: 15px;
+  box-shadow: 0px 0px 5px 1px #202020; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000365}}
+.text-fields {
+  width: 74.5%;
+  height: 65px;
+  border: 1px solid black;
+  text-align: right;
+  background: #EFEFEF;
+  margin: 3px;
+  font-size: 2em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000375}}
+.operators {
+  background: #75706B; }
+
+@media screen and (min-width: 800px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/celeborn\/vagrant-lamp\/sites\/codeup\.dev\/public\/css\/sass\/calculator\.scss}line{font-family:\0000382}}
+  main {
+    width: 40%;
+    padding: 2%; } }
+
+/*# sourceMappingURL=calculator.css.map */

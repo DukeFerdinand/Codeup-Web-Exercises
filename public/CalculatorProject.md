@@ -1,4 +1,4 @@
-### Calculator Project
+# Calculator Project
 ----
 
 #### What to do
