@@ -39,9 +39,9 @@ function pageController($counter, $message){
 	<form method="GET">
 		<input type="hidden" name="count" value="<?= $count ?>">
 	    
-	    <a href="/php/ping.php?count=<?= $count ?>&hit=true">
-	    	<button type="submit" name="hit" value="true">Hit</button>
-	    </a>
+	    
+    	<button type="submit" name="hit" value="true"><a href="/php/ping.php?count=<?= $count ?>&hit=true">Hit</a></button>
+	
 	    <button type="submit" name="hit" value="false">Miss</button>
 	    <button type="submit" name="hit" value="restart">Restart</button>
 	</form>

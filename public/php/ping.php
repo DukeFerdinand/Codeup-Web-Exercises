@@ -40,9 +40,9 @@ function pageController($counter, $message){
 		<input type="hidden" name="count" value="<?= $count ?>">
 	    
 
-	    <a href="/php/pong.php?count=<?= $count ?>&hit=true">
-	   		<button type="submit" name="hit" value="true">Hit</button>
-	    </a>
+	    
+	   		<button type="submit" name="hit" value="true"><a href="/php/pong.php?count=<?= $count ?>&hit=true">Hit</a></button>
+	    
 	    <button type="submit" name="hit" value="false">Miss</button>
 	    <button type="submit" name="hit" value="restart">Restart</button>
 	</form>
