@@ -1,0 +1,224 @@
+$background:         #22313F;
+$carats: 			 #A80022;
+$title-background:   #EFEFEF;
+$title-color:        #6C7A89;
+$transparent-border: 25px solid rgba(0,168,133, 0);
+
+//Section Colors
+$color1: #0076a8;
+$color2: #a80022;
+$color3: #00a832;
+$color4: none;
+$color5: white;
+
+//breakpoints
+$max-width: 500px;;
+
+@mixin position($type, $side, $vertical, $horizontal){
+	position: #{$type}; 
+	top: #{$vertical};
+	#{$side}: #{$horizontal};
+}
+//grid system
+@mixin grid($col-count) {
+	@for $i from 1 through $col-count {
+		$width: 100%;
+
+		.column-#{$i}{
+			width: ($width/$i);
+			float: left;
+		}
+	}
+}
+
+%title-font {
+	font-family: 'Julius Sans One', sans-serif;
+}
+%body-font {
+	font-family: 'Roboto', sans-serif;
+}
+%carat-sides {
+	width:  0;
+	border: {
+		left:  $transparent-border;
+		right: $transparent-border;
+	}
+}
+%clickable-text {
+	cursor:   pointer;
+	user-select: none;
+}
+
+//Navbar & Title ===========================================================================
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+#titlediv {
+	@extend           %title-font;
+	text-align:            center;
+	background: $title-background;
+	padding-top:               3%;
+	margin:                     0;
+	color:           $title-color;
+	font-size:              1.5em;
+}
+
+.carat {
+	@extend      %carat-sides;
+	width:       80%;
+	border: {
+		top:     25px solid $carats;
+		bottom: $transparent-border;
+	}
+	margin: 0 auto;
+}
+
+.invert-carat {
+	@extend               %carat-sides;
+	width: 80%;
+	border: {
+		top:    $transparent-border;
+	    bottom:  25px solid #A80022;
+	}
+	margin: 0 auto;
+}
+
+// .navigation {
+// 	display:           flex;
+// 	justify-content: center;
+// }
+#wrapper{
+	width: 100%;
+}
+#wrapper-hidden{
+	@include position(fixed, left, 0, 0);
+
+	width: 100%;
+	display: none;
+	z-index: 3;
+}
+#navbar,
+#navbar-hidden {
+	padding:                0;
+	background-color: #A80022;
+	position:        relative;
+	z-index:                2;
+	.navbar-cont{
+		display:           flex;
+		justify-content: center;
+	}
+}
+.navbar-fixed{
+	@include position(fixed, left, 0, 0);
+}
+.navbar-sect {
+	border-radius:                 35px;
+	display:                       flex;
+	justify-content:             center;
+	margin: {
+		top:                    10px;
+	    bottom:                 10px;
+	}
+	background-color: $title-background;
+	text-align:                  center;
+}
+
+.navbar-sect-icons{
+	@extend .navbar-sect;
+}
+.navbar-item {
+	@extend    %clickable-text;
+	@extend   	   %title-font;
+	display:      inline-block;
+	margin:               20px;
+	font-size: 1.5em;
+
+}
+.navbar-item:hover{
+	color: $title-color;
+}
+
+//=======================================================================>
+//======================== Media Breakpoints ==============================>
+//=======================================================================>
+
+
+
+@media screen and (max-width: $max-width) {
+	.mobile-nav{
+		@include position(fixed, -10%, left, 0);
+		display: block;
+		width: 100%;
+		background: $title-background;
+		height: 10%;
+		border-bottom: 5px solid $carats;
+
+	}
+	#titlediv {
+		@include position(relative, left, 0, 0);
+		height: 100%;
+		border-bottom: 5px solid $carats;
+	}
+
+	.title{
+		display: inline;
+		text-align: center;
+		width:         90%;	
+		margin:     0 auto;
+		margin-bottom: -1em;
+		font-size: .75em;
+		
+		&:after{
+			clear: both;
+			display: table;
+			content: "";
+		}
+	}
+	#navbar {
+		display: none;
+	}
+	.navbar-sect{
+		width: 100%;
+
+		&:after{
+			content:    "";
+			display: table;
+			clear:    both;
+		}
+	}
+	.navbar-sect {
+		display:                    initial;
+		margin: {
+			top:    50px;
+			bottom: 50px;
+		}
+		width:                         100%;
+		background-color: $title-background;
+		text-align:                  center;
+	}
+	.navbar-sect-icons{
+		display: none;
+	}
+	.carat{
+		display: none;
+	}
+	.invert-carat {
+		display: none;
+	}
+	.positioner{
+	width:         30px;
+	height:        30px;
+	@include position(absolute, right, 70%, 1em);
+	
+	}
+	.indicator {
+		margin-top: 3px;
+		width: 23px;
+		height: 4px;
+		border-radius: 5px;
+		background: black;
+	}
+}

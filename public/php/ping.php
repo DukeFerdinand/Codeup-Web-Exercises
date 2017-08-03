@@ -1,31 +1,41 @@
 <?php
 
-$counter = 0;
-$message = "Ping";
-function pageController($counter, $message){
+require 'functions.php';
+require 'nav/nav.php';
 
-	$counter = isset($_GET['count']) ? $_GET['count']++ : '0';
 
-	if (isset($_GET["hit"])){
-		if ($_GET["hit"] == 'true') {
-			$counter = $counter += 1;
+
+function pageController(){
+	$message = "Ping";
+
+	$count = inputGet('count');
+	$hit = inputGet('hit');
+
+	if ($count == null){
+		$count = 0;
+	}
+
+
+	if (!empty($_GET)){
+		var_dump($hit);
+		if ($hit == 'true'){
+			$count = up($count);
+			echo "<h1>$count</h1>";
 			$message = "Ping";
-		} else if ($_GET["hit"] == 'false') {
-			$counter = 0;
+		} else if ($hit == 'false'){
+			$count = 0;
 			$message = "You Lose!";
-		} else {
-			$counter = 0;
 		}
 	}
 
 	return [
 		// "results" => $search,
-		"count" => $counter,
+		"count" => $count,
 		"message" => $message
 
 	];
 }
-	extract(pageController($counter, $message));
+	extract(pageController());
 
 ?>
 
@@ -33,15 +43,19 @@ function pageController($counter, $message){
 <html>
 <head>
 	<title>Get Requests</title>
+<?php require_once "stylesheets.php" ?>
 </head>
 <body>
+
+<?php echo "nav.php" ?>
+
 	<h1><?= $message ?></h1>
 	<form method="GET">
-		<input type="hidden" name="count" value="<?= $count ?>">
+		<input type="hidden" name="count" value="<?= $count + 1?>">
 	    
 
 	    
-	   		<button type="submit" name="hit" value="true"><a href="/php/pong.php?count=<?= $count ?>&hit=true">Hit</a></button>
+	   		<button type="submit" name="hit" value="true"><a href="/php/pong.php?count=<?= $count + 1 ?>&hit=true">Hit</a></button>
 	    
 	    <button type="submit" name="hit" value="false">Miss</button>
 	    <button type="submit" name="hit" value="restart">Restart</button>
