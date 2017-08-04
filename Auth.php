@@ -23,14 +23,29 @@ class Auth
      * @param string $username the username to check
      * @param string $password the password to check
      */
+    
     public static function attempt($username, $password)
     {
+        $success = false;
         // TODO: check if the passed username matches the static username
         //       property
-        // TODO: use the `password_verify` function to check if the passed
-        //       password matches the static password property
+        if ($username == self::$username && password_verify($password, static::$password)){
+            $success = true;
+            $_SESSION['user'] = $_REQUEST['user'];
+            echo "Passed!";
+            var_dump($_SESSION);
+        }
         // TODO: create an instance of the Log class to log a message of whether
         //       or not the login attempt was successful or not
+        $log = new Log();
+
+        if ($success){
+            $log->info("User ${$_SESSION['user']} logged in!");
+        } else {
+            $log->error("Failed attempt to login $username");
+        }
+
+
         // TODO: if the username and password match, set the 'LOGGED_IN_USER'
         //       key in the session to the passed username
     }

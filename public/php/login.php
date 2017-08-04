@@ -1,30 +1,40 @@
 <?php
+require_once "../../functions.php";
+require_once "../../Auth.php";
+require_once "../../Input.php";
+require_once "../../Log.php";
 
 	session_start();
 	$sessionId = session_id();
 	
-	if (!empty($_SESSION['currentUser'])){
-		header('Location: /php/authorized.php');
+	// if (!empty($_SESSION['currentUser'])){
+	// 	header('Location: /php/authorized.php');
+	// }
+
+	function open($fileName)
+	{
+		$handle = fopen($fileName, 'a');
+		return $handle;
+		
+	}
+	function write($fileName, $message)
+	{
+		fwrite($fileName, $message);
 	}
 
-
+	function close($fileName)
+	{
+		fclose($fileName);
+	}
 
 $login = "";
 function page(){
-	$user = isset($_POST['user']) ? $_POST['user'] : '';
+	// $username = isset($_POST['user']) ? $_POST['user'] : '';
 
-	$pass = isset($_POST['pass']) ? $_POST['pass'] : '';
+	// $pass = isset($_POST['pass']) ? $_POST['pass'] : '';
 
-	if ($user == 'guest' && $pass = 'pass'){
-		var_dump($sessionId);
-		$_SESSION['currentUser'] = $_POST['user'];
-		header('Location: /php/authorized.php');
-		die();
-	} else if (count($_POST) < 2){
-		$login = "";
-	} else {
-		// 
-		$login = 'Either username or password was incorrect!';
+	if (Input::has('user') && Input::has('pass')){
+		Auth::attempt(Input::get('user'), Input::get('pass'));
 	}
 
 	// return $sessionId;
