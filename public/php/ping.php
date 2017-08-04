@@ -2,16 +2,20 @@
 
 require 'functions.php';
 require 'nav/nav.php';
-
-
+require_once '../../Input.php';
 
 function pageController(){
 	$message = "Ping";
 
-	$count = inputGet('count');
-	$hit = inputGet('hit');
 
-	if ($count == null){
+	if (Input::has('count')){
+		$count = Input::get('count');
+	}
+	if (Input::has('hit')){
+		$hit = Input::get('hit');
+	}
+
+	if (!Input::has('count')){
 		$count = 0;
 	}
 

@@ -1,21 +1,17 @@
 <?php
 
 require 'functions.php';
-require 'nav/nav.php';
-require_once '../../Input.php';
+require_once 'Input.php';
+// require 'nav/nav.php';
 
 
 function pageController(){
 	$message = "Pong";
 
-	if (Input::has('count')){
-		$count = Input::get('count');
-	}
-	if (Input::has('hit')){
-		$hit = Input::get('hit');
-	}
+	$count = inputGet('count');
+	$hit = inputGet('hit');
 
-	if (!Input::has('count')){
+	if ($count == null){
 		$count = 0;
 	}
 
@@ -45,11 +41,11 @@ function pageController(){
 <html>
 <head>
 	<title>Get Requests</title>
-<?php require_once "stylesheets.php" ?>
+<!-- <?php require_once "stylesheets.php" ?> -->
 </head>
 <body>
 
-<?php echo "nav.php" ?>
+<!-- <?php echo "nav.php" ?> -->
 	<h1><?= $message ?></h1>
 	<form method="GET">
 		<input type="hidden" name="count" value="<?= $count + 1?>">
