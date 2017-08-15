@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>National Parks</title>
+
+	<style type="text/css">
+/*		.button {
+			display: inline-block;
+			width: 12vw;
+			height: 4vh;
+			background: gray;
+		}*/
+	</style>
+</head>
+<body>
+	<h1>National Parks</h1>
+	<table class="table table-bordered">
+		<tr>
+			<th>Name</th>
+			<th>Location</th>
+			<th>Date Established</th>
+			<th>Acreage</th>
+
+		</tr>
+		<?php foreach ($arr as $park) : ?>
+		<tr>
+			<td><?php print_r($park['name']) ?></td>
+			<td><?php print_r($park['location'])?></td>
+			<td><?php print_r($park['date_established']) ?></td>
+			<td><?php print_r($park['area_in_acres']) ?></td>
+		</tr>
+		<?php endforeach ?>
+
+	</table>
+	
+		<a class="btn btn-danger" href="<?php if ($OFFSET > 0) {echo '?OFFSET=' . ($OFFSET - 4); }?>">Previous</a>	
+		<a class="btn btn-info" href="<?php if ($OFFSET < 56) {echo '?OFFSET=' . ($OFFSET + 4); }?>">Next</a>
+</body>
+</html>

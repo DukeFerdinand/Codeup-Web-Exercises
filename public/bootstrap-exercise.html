@@ -11,6 +11,17 @@
 <body>
 
 <main>
+<script type="text/javascript" src="https://static.filestackapi.com/v3/filestack.js"></script>
+<script>
+    var client = filestack.init('Arm3f7HJReOkjrR25yPiwz');
+    function showPicker() {
+        client.pick({
+        }).then(function(result) {
+            console.log(JSON.stringify(result.filesUploaded))
+        });
+    }
+</script>
+<input type="button" value="Upload" onclick="showPicker()" />
 <header>
 	<h1 class="text-uppercase">hello <small>welcome</small></h1>
 </header>		
